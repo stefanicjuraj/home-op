@@ -22,13 +22,11 @@ export default function Payments() {
     };
 
     const sortPayments = payments.sort((a, b) => {
-        // Sort by isPaid status
         if (a.isPaid !== b.isPaid) {
-            return a.isPaid ? 1 : -1; // Sort 'not paid' first
+            return a.isPaid ? 1 : -1;
         }
 
-        // If isPaid status is the same, sort by remaining days
-        const aDueDate = a.dueDate ? a.dueDate.seconds : Number.MAX_SAFE_INTEGER; // Set default to largest number
+        const aDueDate = a.dueDate ? a.dueDate.seconds : Number.MAX_SAFE_INTEGER;
         const bDueDate = b.dueDate ? b.dueDate.seconds : Number.MAX_SAFE_INTEGER;
         return aDueDate - bDueDate;
     });
@@ -37,7 +35,6 @@ export default function Payments() {
         <>
             <div className="sm:ml-72 mt-32 mb-16 mx-auto max-w-7xl p-4">
                 <h1 className="text-5xl font-bold">Bills & Payments</h1>
-                <p className="mt-8 text-xl w-2/3 text-black">Welcome to your bills and payments dashboard.</p>
                 <p className="mt-4 text-xl w-2/3 text-black">
                     Here you can create, manage, and keep track of your bills, expenses and payments.
                 </p>

@@ -12,7 +12,6 @@ export default function Inventory() {
         <>
             <div className="sm:ml-72 mt-32 mb-16 mx-auto max-w-7xl p-4">
                 <h1 className="text-5xl font-bold">Inventory</h1>
-                <p className="mt-8 text-xl w-2/3 text-black">Welcome to your home inventory.</p>
                 <p className="mt-4 text-xl w-2/3 text-black">
                     Create, manage, and keep track of your household items and supplies.
                 </p>

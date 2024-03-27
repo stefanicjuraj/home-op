@@ -27,7 +27,6 @@ export default function Wishlist() {
         <>
             <div className="mt-32 mb-16 mx-auto max-w-7xl p-4">
                 <h1 className="text-5xl font-bold">Wishlist</h1>
-                <p className="mt-8 text-xl w-2/3 text-black">Welcome to your wishlist dashboard.</p>
                 <p className="mt-4 text-xl w-2/3 text-black">
                     Create, manage, and keep track of your home wishlist.
                 </p>
