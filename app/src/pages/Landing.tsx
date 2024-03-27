@@ -1,4 +1,5 @@
-import Login from './Login';
+// Components
+import Login from '../components/Login';
 // Icons
 import bill from '/bill-white.svg';
 import maintenance from '/maintenance-white.svg';
