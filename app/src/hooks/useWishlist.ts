@@ -3,7 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { doc, onSnapshot, Timestamp, runTransaction } from "firebase/firestore";
 import { auth, db } from "../services/firebase";
 import { Wishlist } from "../types/wishlist";
-import { formatDateInput } from "../utils/formatDateInput";
+import { formatDateInput } from "../utils/formatDate";
 
 export function useWishlist() {
   const [wishlistItems, setWishlistItems] = useState<Wishlist[]>([]);

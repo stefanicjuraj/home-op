@@ -3,7 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { doc, onSnapshot, Timestamp, runTransaction } from "firebase/firestore";
 import { auth, db } from "../services/firebase";
 import { Payment } from "../types/payment";
-import { formatDateInput } from "../utils/formatDateInput";
+import { formatDateInput } from "../utils/formatDate";
 
 export function usePayment() {
   const [payments, setPayments] = useState<Payment[]>([]);
