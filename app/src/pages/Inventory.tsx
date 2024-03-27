@@ -1,5 +1,5 @@
 import { useInventory } from '../hooks/useInventory';
-import AddInventory from '../components/InventoryForm';
+import AddInventory from '../components/AddInventory';
 import icon from '/delete.svg';
 
 export default function Inventory() {
