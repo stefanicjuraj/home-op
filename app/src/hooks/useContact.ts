@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { doc, onSnapshot, runTransaction } from "firebase/firestore";
+// Services
 import { db, auth } from "../services/firebase";
+// Types
 import { Contact } from "../types/contact";
 
 export const useContact = () => {

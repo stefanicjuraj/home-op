@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { doc, Timestamp, onSnapshot, runTransaction } from "firebase/firestore";
+// Services
 import { db, auth } from "../services/firebase";
+// Types
 import { Visitor } from "../types/visitors";
 
 export const useVisitor = () => {

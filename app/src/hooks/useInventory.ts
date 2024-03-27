@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { doc, onSnapshot, Timestamp, runTransaction } from "firebase/firestore";
+// Services
 import { auth, db } from "../services/firebase";
+// Types
 import { Inventory } from "../types/inventory";
+// Utils
 import { formatDateInput } from "../utils/formatDate";
 
 export function useInventory() {

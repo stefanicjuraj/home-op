@@ -6,8 +6,9 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
-import { auth, db } from "../services/firebase";
 import { arrayUnion, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
+// Services
+import { auth, db } from "../services/firebase";
 
 export const createUser = async (email: string, password: string) => {
   try {
