@@ -1,6 +1,9 @@
 import { useState } from 'react';
+// Hooks
 import { usePayment } from '../hooks/usePayment';
+// Components
 import AddPayment from '../components/AddBillsPayments';
+// Icons
 import icon from '/delete.svg';
 import sort from '/sort.svg';
 

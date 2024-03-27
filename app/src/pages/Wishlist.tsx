@@ -1,6 +1,9 @@
 import { useState } from 'react';
+// Hooks
 import { useWishlist } from '../hooks/useWishlist';
+// Components
 import WishlistForm from '../components/AddWishlist';
+// Icons
 import deleteIcon from '/delete.svg';
 import sortIcon from '/sort.svg';
 
@@ -8,12 +11,10 @@ export default function Wishlist() {
     const { wishlistItems, handleDelete, formatDateInput } = useWishlist();
     const [sortTypeFirst, setSortTypeFirst] = useState(true);
 
-    // Function to toggle sorting preference
     const toggleSort = () => {
         setSortTypeFirst(!sortTypeFirst);
     };
 
-    // Modify the sort function based on sortTypeFirst state
     const sortedWishlistItems = wishlistItems.sort((a, b) => {
         if (sortTypeFirst) {
             return a.type.localeCompare(b.type);

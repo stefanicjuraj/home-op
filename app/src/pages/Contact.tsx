@@ -1,5 +1,8 @@
+// Hooks
 import { useContact } from '../hooks/useContact';
+// Componenets
 import ContactForm from '../components/AddContact';
+// Icons
 import DeleteIcon from '/delete.svg';
 
 export default function Contact() {

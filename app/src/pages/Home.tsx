@@ -19,14 +19,14 @@ export default function Home() {
     useEffect(() => {
         const fetchUserData = async () => {
             if (user) {
-                const documentRef = doc(db, "collection", "document"); // Adjust path as needed
+                const documentRef = doc(db, "collection", "document");
                 const document = await getDoc(documentRef);
 
                 if (document.exists()) {
                     const usersArray = document.data().users;
-                    const userData = usersArray.find((u: { id: unknown; }) => u.id === user.uid); // Find the user by UID
+                    const userData = usersArray.find((u: { id: unknown; }) => u.id === user.uid);
                     if (userData && userData.displayName) {
-                        setDisplayName(userData.displayName); // Set the displayName state
+                        setDisplayName(userData.displayName);
                     }
                 }
             }

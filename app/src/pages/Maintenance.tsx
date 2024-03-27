@@ -1,6 +1,9 @@
+// Hooks
 import { useMaintenance } from '../hooks/useMaintenance';
-import icon from '/delete.svg';
+// Components
 import MaintenanceForm from '../components/AddMaintenance';
+// Icons
+import icon from '/delete.svg';
 
 export default function Maintenance() {
     const { maintenance, handleDelete, formatDateForInput } = useMaintenance();

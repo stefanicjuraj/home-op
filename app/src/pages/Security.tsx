@@ -1,5 +1,8 @@
+// Hooks
 import { useSecurity } from '../hooks/useSecurity';
+// Components
 import SecurityForm from '../components/AddSecurity';
+// Icons
 import DeleteIcon from '/delete.svg';
 
 export default function Security() {
