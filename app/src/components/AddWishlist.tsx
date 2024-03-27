@@ -69,7 +69,7 @@ export default function AddWishlist() {
                         <option value="Household">Household</option>
                     </select>
                 </div>
-                <button className="w-16 bg-gray-50 border bg-blue-600 text-white text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 mt-8 p-3 my-2 mr-2"
+                <button className="w-16 border bg-blue-500 text-white text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 mt-8 p-3 my-2 mr-2"
                     type="submit">Add
                 </button>
             </form>
