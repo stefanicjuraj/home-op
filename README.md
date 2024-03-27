@@ -4,6 +4,14 @@ Home Operations (Home Op) is a web application designed to create, manage, plan 
 
 The objective of the application is to simplify and optimize the management and administration of household tasks via secure, responsive, intuitive, and user-friendly experience.
 
+<br />
+
+<div align="center">
+    <img src="/app/public/HomeOp-home.png" width="75%">
+</div>
+
+<br />
+
 ## Getting Started
 
 ### Requirements
