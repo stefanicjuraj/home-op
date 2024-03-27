@@ -10,6 +10,7 @@ import inventory from '/inventory-white.svg';
 import visitors from '/visitors-white.svg';
 import security from '/security-white.svg';
 import contact from '/contact-white.svg';
+import wishlist from '/wishlist-white.svg';
 
 export default function Home() {
     const [displayName, setDisplayName] = useState('');
@@ -140,6 +141,23 @@ export default function Home() {
                         </h1>
                         <h1 className="mb-2">
                             Track the condition of their property, schedule regular maintenance activities, and arrange for repairs.
+                        </h1>
+                        <div className="flex flex-row-reverse">
+
+                        </div>
+                    </div>
+                </Link>
+                {/* Wishlist */}
+                <Link to="/wishlist">
+                    <div className="mb-8 px-8 py-4 rounded-xl bg-blue-50 shadow-sm hover:shadow-inner hover:shadow-gray-300 animation glow delay-5">
+                        <div className="flex justify-center items-center mt-4 mb-4 w-10 h-10 rounded-full bg-blue-400 lg:h-12 lg:w-12">
+                            <img src={wishlist} alt="dropdown" className="w-7 h-7" />
+                        </div>
+                        <h1 className="mb-4 text-xl font-bold">
+                            Wishlist
+                        </h1>
+                        <h1 className="mb-2">
+                            Keep track of items you want to buy and plan your purchases.
                         </h1>
                         <div className="flex flex-row-reverse">
 
