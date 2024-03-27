@@ -45,7 +45,7 @@ export default function Home() {
                     Welcome to your home dashboard.
                 </p>
                 <p className="mt-4 text-xl w-2/3 text-black">
-                    Create, manage, plan and keep track of your bills and payments, home inventory, visitors, contacts, security and household maintenance.
+                    Create, manage, plan and keep track of your upcoming bills and payments, home inventory, invited visitors, important contacts, security protocols, household maintenance, and home wishlist.
                 </p>
             </div>
 

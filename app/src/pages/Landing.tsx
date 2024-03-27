@@ -17,7 +17,7 @@ export default function Landing() {
                         HomeOp
                     </h1>
                     <p className="text-center text-[#000] text-2xl mx-auto mt-16 mb-16 w-4/5">
-                        Create, manage, plan and keep track of your upcoming bills and payments, home inventory, invited visitors, important contacts, security protocols and household maintenance.
+                        Create, manage, plan and keep track of your upcoming bills and payments, home inventory, invited visitors, important contacts, security protocols, household maintenance, and home wishlist.
                     </p>
                     <Login />
                     <div className="text-[#000] space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
