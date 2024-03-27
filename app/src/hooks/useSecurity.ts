@@ -30,7 +30,7 @@ export const useSecurity = () => {
     e.preventDefault();
     if (!user) return;
 
-    const documentRef = doc(db, "collection", "document"); // Adjust collection path
+    const documentRef = doc(db, "collection", "document");
     try {
       await runTransaction(db, async (transaction) => {
         const document = await transaction.get(documentRef);
@@ -69,7 +69,7 @@ export const useSecurity = () => {
   const handleDelete = async (protocolId: number) => {
     if (!user) return;
 
-    const documentRef = doc(db, "collection", "document"); // Adjust collection path
+    const documentRef = doc(db, "collection", "document");
     try {
       await runTransaction(db, async (transaction) => {
         const document = await transaction.get(documentRef);

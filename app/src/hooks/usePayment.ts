@@ -125,7 +125,6 @@ export function usePayment() {
     }
   };
 
-  // Effects
   useEffect(() => {
     const unsubscribe = user
       ? onSnapshot(doc(db, "collection", "document"), (document) => {
