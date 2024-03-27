@@ -1,0 +1,7 @@
+body {
+  scroll-behavior: smooth;
+  /* disable user select */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
