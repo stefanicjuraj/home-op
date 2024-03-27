@@ -7,7 +7,7 @@ The objective of the application is to simplify and optimize the management and 
 <br />
 
 <div align="center">
-    <img src="/app/public/HomeOp-home.png" width="75%">
+    <img src="/app/public/HomeOp.png" width="75%">
 </div>
 
 <br />
