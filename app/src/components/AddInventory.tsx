@@ -1,6 +1,5 @@
 import { useInventory } from '../hooks/useInventory';
 
-
 export default function AddInventory() {
     const { newInventory, setNewInventory, handleInputChange, handleSubmit, formatDateInput } = useInventory();
 

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+// Components
 import LogOut from './Logout';
 // Icons
 import home from '/home.svg';

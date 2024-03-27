@@ -1,4 +1,6 @@
+// Hooks
 import { usePayment } from "../hooks/usePayment";
+// Icons
 import cost from '/cost.svg';
 
 export default function AddBillsPayments() {
