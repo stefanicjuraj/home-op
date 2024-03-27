@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useWishlist } from '../hooks/useWishlist';
-import WishlistForm from '../components/WishlistForm';
+import WishlistForm from '../components/AddWishlist';
 import deleteIcon from '/delete.svg';
 import sortIcon from '/sort.svg';
 

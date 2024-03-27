@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { usePayment } from '../hooks/usePayment';
-import AddPayment from '../components/PaymentForm';
+import AddPayment from '../components/AddBillsPayments';
 import icon from '/delete.svg';
 import sort from '/sort.svg';
 

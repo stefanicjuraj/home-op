@@ -1,7 +1,7 @@
 
 import { useVisitor } from '../hooks/useVisitor';
 import icon from '/delete.svg';
-import AddVisitor from '../components/VisitorForm';
+import AddVisitor from '../components/AddVisitor';
 
 export default function Visitors() {
     const { visitors, showAlert, handleDeleteWithAlert, calculateRemainingDays } = useVisitor();
