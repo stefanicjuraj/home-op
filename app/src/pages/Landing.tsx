@@ -27,7 +27,7 @@ export default function Landing() {
                             </div>
                             <h2 className="mb-4 text-2xl font-bold">Bills & Payments</h2>
                             <p className="text-gray-500">
-                                Plan it, create it, launch it. Collaborate seamlessly with all the organization and hit your marketing goals every month with our marketing plan.
+                                View and manage your bills and payments, and keep track of your expenses.
                             </p>
                         </div>
                         <div>
@@ -35,42 +35,54 @@ export default function Landing() {
                                 <img src={inventory} alt="dropdown" className="w-8 h-8" />
                             </div>
                             <h2 className="mb-2 text-2xl font-bold">Inventory</h2>
-                            <p className="text-gray-500">Protect your organization, devices and stay compliant with our structured workflows and custom permissions made for you.</p>
+                            <p className="text-gray-500">
+                                Stay updated with the latest inventory and stock levels of your home essentials.
+                            </p>
                         </div>
                         <div>
                             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-500 lg:h-16 lg:w-16">
                                 <img src={visitors} alt="dropdown" className="w-8 h-8" />
                             </div>
                             <h2 className="mb-2 text-2xl font-bold">Visitors</h2>
-                            <p className="text-gray-500">Auto-assign tasks, send Slack messages, and much more. Now power up with hundreds of new templates to help you get started.</p>
+                            <p className="text-gray-500">
+                                Keep track of your visitors and guests, and manage their stay at your home.
+                            </p>
                         </div>
                         <div>
                             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-500 lg:h-16 lg:w-16">
                                 <img src={contact} alt="dropdown" className="w-8 h-8" />
                             </div>
                             <h2 className="mb-2 text-2xl font-bold">Contacts</h2>
-                            <p className="text-gray-500">Audit-proof software built for critical financial operations like month-end close and quarterly budgeting.</p>
+                            <p className="text-gray-500">
+                                Store and manage a list of emergency contacts, including family members, friends, and local emergency services.
+                            </p>
                         </div>
                         <div>
                             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-500 lg:h-16 lg:w-16">
                                 <img src={security} alt="dropdown" className="w-8 h-8" />
                             </div>
                             <h2 className="mb-2 text-2xl font-bold">Security</h2>
-                            <p className="text-gray-500">Craft beautiful, delightful experiences for both marketing and product with real cross-company collaboration.</p>
-                        </div>
-                        <div>
-                            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-500 lg:h-16 lg:w-16">
-                                <img src={maintenance} alt="dropdown" className="w-8 h-8" />
-                            </div>
-                            <h3 className="mb-2 text-2xl font-bold">Wishlist</h3>
-                            <p className="text-gray-500">Keep your company’s lights on with customizable, iterative, and structured workflows built for all efficient teams and individual.</p>
+                            <p className="text-gray-500">
+                                Set and manage security protocols, such as closing windows, doors before leaving your home.
+                            </p>
                         </div>
                         <div>
                             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-500 lg:h-16 lg:w-16">
                                 <img src={maintenance} alt="dropdown" className="w-8 h-8" />
                             </div>
                             <h3 className="mb-2 text-2xl font-bold">Maintenance</h3>
-                            <p className="text-gray-500">Keep your company’s lights on with customizable, iterative, and structured workflows built for all efficient teams and individual.</p>
+                            <p className="text-gray-500">
+                                Track the condition of their property, schedule regular maintenance activities, and arrange for repairs.
+                            </p>
+                        </div>
+                        <div>
+                            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-500 lg:h-16 lg:w-16">
+                                <img src={maintenance} alt="dropdown" className="w-8 h-8" />
+                            </div>
+                            <h3 className="mb-2 text-2xl font-bold">Wishlist</h3>
+                            <p className="text-gray-500">
+                                Keep track of items you want to buy and plan your purchases.
+                            </p>
                         </div>
                     </div>
                 </div>
