@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 // Components
 import LogOut from './Logout';
@@ -17,7 +17,7 @@ export default function Navbar() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [activePath, setActivePath] = useState("/");
     const location = useLocation();
-
+    const sidebarRef = useRef(null);
     // toggle sidebar
     const toggleSidebar = () => {
         setSidebarOpen((prevState) => !prevState);
@@ -30,14 +30,25 @@ export default function Navbar() {
 
     // close sidebar on click outside
     useEffect(() => {
+        // this closes the sidebar when clicked on a link
         const links = document.querySelectorAll("#logo-sidebar a");
         links.forEach((link) => {
             link.addEventListener("click", closeSidebar);
         });
+        
+        // this closes the sidebar when clicked outside of it
+        const handleClickOutside = (event: React.MouseEvent) => {
+            if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+                setSidebarOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
         return () => {
             links.forEach((link) => {
                 link.removeEventListener("click", closeSidebar);
             });
+            document.removeEventListener('mousedown', handleClickOutside);
         };
     }, []);
 
@@ -81,6 +92,7 @@ export default function Navbar() {
             </nav>
 
             <aside id="logo-sidebar"
+                ref={sidebarRef}
                 className={`transition-transform left-0 top-0 fixed top-0 left-0 z-40 w-72 h-screen pt-40 transition-transform ${sidebarOpen ? "md:-translate-x-0" : "md:-translate-x-full"} bg-white shadow ${sidebarOpen ? "-translate-x-0" : "-translate-x-full"}`}
             >
                 <div className="h-full px-3 pb-4 overflow-y-auto bg-white">
