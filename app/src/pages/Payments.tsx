@@ -33,7 +33,7 @@ export default function Payments() {
 
     return (
         <>
-            <div className="sm:ml-72 mt-32 mb-16 mx-auto max-w-7xl p-4">
+            <div className="mt-32 mb-16 mx-auto max-w-7xl p-4">
                 <h1 className="text-5xl font-bold">Bills & Payments</h1>
                 <p className="mt-4 text-xl w-2/3 text-black">
                     Here you can create, manage, and keep track of your bills, expenses and payments.
@@ -50,7 +50,7 @@ export default function Payments() {
 
             <AddPayment />
 
-            <div className="sm:ml-72 mx-auto max-w-7xl relative overflow-x-auto px-4 mb-32">
+            <div className="mx-auto max-w-7xl relative overflow-x-auto px-4 mb-32">
                 <table className="max-w-7xl mx-auto w-full text-left rtl:text-right">
                     <thead className="text-md text-blue-500 uppercase bg-blue-50">
                         <tr>
