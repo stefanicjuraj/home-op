@@ -4,7 +4,7 @@ export default function AddVisitor() {
     const { newVisitor, setNewVisitor, handleInputChange, handleSubmit, formatDateForInput } = useVisitor();
 
     return (
-        <div className="sm:ml-72 mx-auto mb-8 max-w-7xl px-4">
+        <div className="mx-auto mb-8 max-w-7xl px-4">
             <form onSubmit={handleSubmit} className="flex flex-wrap items-center justify-between">
                 <div className="flex-1 min-w-[40%] md:min-w-[30%] mr-2">
                     <label htmlFor="payment" className="block mb-1 text-gray-500 text-sm">Visitor name</label>
