@@ -10,5 +10,5 @@ export const formatDateInput = (date: Date | { seconds: number }): string => {
   const formattedMonth = month < 10 ? `0${month}` : month;
   const formattedDay = day < 10 ? `0${day}` : day;
 
-  return `${formattedDay}/${formattedMonth}/${year}`;
+  return `${year}-${formattedMonth}-${formattedDay}`;
 };
