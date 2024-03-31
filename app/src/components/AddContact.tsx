@@ -21,7 +21,7 @@ export default function AddContact() {
                 <div className="flex-1 min-w-[50%] md:min-w-[20%] mr-2 my-2">
                     <label htmlFor="payment" className="block mb-1 text-gray-500 text-sm">Phone number</label>
                     <input className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
-                        type="text"
+                        type="number"
                         name="phoneNumber"
                         placeholder="Phone Number"
                         value={newContacts.phoneNumber}
