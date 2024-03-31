@@ -35,7 +35,7 @@ export default function Navbar() {
         links.forEach((link) => {
             link.addEventListener("click", closeSidebar);
         });
-        
+
         // this closes the sidebar when clicked outside of it
         const handleClickOutside = (event: React.MouseEvent) => {
             if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
@@ -98,7 +98,7 @@ export default function Navbar() {
                 <div className="h-full px-3 pb-4 overflow-y-auto bg-white">
                     <ul className="space-y-3 font-normal text-lg">
                         <li>
-                            <Link to="/home" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/home")}`}>
+                            <Link to="/" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/home")}`}>
                                 <img src={home} alt="bill" className="w-6 h-6" />
                                 <span className="ms-3">My Home</span>
                             </Link>
