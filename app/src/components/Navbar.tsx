@@ -72,7 +72,7 @@ export default function Navbar() {
                             <button onClick={toggleSidebar} data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar" type="button" className="inline-flex items-center p-2 text-sm rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-300 cursor-pointer">
                                 <img src={menu} alt="dropdown" className="w-7 h-7" />
                             </button>
-                            <Link to="/home" className="flex ms-3 md:me-24">
+                            <Link to="/" className="flex ms-3 md:me-24">
                                 <h1 className="self-center text-blue-500 font-thin text-3xl whitespace-nowrap">
                                     HomeOp
                                 </h1>
