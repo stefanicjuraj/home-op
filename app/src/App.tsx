@@ -9,7 +9,7 @@ import LogOut from "./components/Logout";
 import Navbar from "./components/Navbar";
 // Pages
 import Home from "./pages/Home";
-import Payments from "./pages/Payments";
+import BillsPayments from "./pages/BillsPayments";
 import Visitors from "./pages/Visitors";
 import Inventory from "./pages/Inventory";
 import Maintenance from "./pages/Maintenance";
@@ -42,7 +42,7 @@ export default function App() {
             <LogOut />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/payments" element={<Payments />} />
+              <Route path="/payments" element={<BillsPayments />} />
               <Route path="/inventory" element={<Inventory />} />
               <Route path="/contacts" element={<Contact />} />
               <Route path="/visitors" element={<Visitors />} />
