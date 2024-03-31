@@ -6,6 +6,16 @@ The objective of the application is to simplify and optimize the management and 
 
 As I am sharing a similar process to many students finishing their studies, the natural progression for us now is to start the next significant phase of our lives: finding a place to call home. This transition from academia to establishing our own personal space signifies a pivotal moment of growth and independence. It's a time filled with excitement and possibilities, as we search for a space that resonates with our aspirations and lifestyle, a place where we can lay down our roots, create new memories, and start building our futures.
 
+## Features
+
+- [x] **Bills & Payments**: View and manage your bills and payments, and keep track of your expenses.
+- [x] **Inventory**: Stay updated with the latest inventory and stock levels of your home essentials.
+- [x] **Visitors**: Keep track of your visitors and guests, and manage their stay at your home.
+- [x] **Contacts**: Store and manage a list of emergency contacts, including family members, friends, and local emergency services.
+- [x] **Security**: Set and manage security protocols, such as closing windows, doors before leaving your home.
+- [x] **Maintenance**: Track the condition of their property, schedule regular maintenance activities, and arrange for repairs.
+- [x] **Wishlist**: Keep track of items you want to buy and plan your purchases.
+
 <br />
 
 <div align="center">
