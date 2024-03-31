@@ -1,4 +1,6 @@
 import { useWishlist } from "../hooks/useWishlist";
+// Icons
+import cost from '/cost.svg';
 
 export default function AddWishlist() {
     const { newWishlistItem, setNewWishlistItem, handleInputChange, handleSubmit, formatDateInput } = useWishlist();
@@ -32,16 +34,20 @@ export default function AddWishlist() {
                     />
                 </div>
                 <div className="flex-1 min-w-[30%] sm:min-w-[10%] mr-2 my-2">
-                    <label htmlFor="payment" className="block mb-1 text-gray-500 text-sm">Cost</label>
-                    <input className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
-                        type="number"
-                        id="cost"
-                        name="cost"
-                        placeholder="Cost"
-                        value={newWishlistItem.cost}
-                        onChange={handleInputChange}
-                        required
-                    />
+                    <label htmlFor="cost" className="block mb-1 text-gray-500 text-sm">Cost</label>
+                    <div className="relative w-full">
+                        <div className="absolute inset-y-0 start-0 top-0 flex items-center ps-3 pointer-events-none">
+                            <img src={cost} className="h-6 w-6" />
+                        </div>
+                        <input className="block p-3.5 w-full z-20 ps-10 text-sm text-gray-900 rounded-md border border-gray-500 focus:border-blue-500 focus:ring-offset-gray-100"
+                            type="number"
+                            id="cost"
+                            name="cost"
+                            placeholder="Cost"
+                            value={newWishlistItem.cost}
+                            onChange={handleInputChange}
+                            required />
+                    </div>
                 </div>
                 <div className="flex-1 min-w-[30%] sm:min-w-[10%] mr-2 my-2">
                     <label htmlFor="payment" className="block mb-1 text-gray-500 text-sm">Date</label>
