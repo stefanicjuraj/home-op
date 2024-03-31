@@ -41,7 +41,7 @@ export default function App() {
             <Navbar />
             <LogOut />
             <Routes>
-              <Route path="/home" element={<Home />} />
+              <Route path="/" element={<Home />} />
               <Route path="/payments" element={<Payments />} />
               <Route path="/inventory" element={<Inventory />} />
               <Route path="/contacts" element={<Contact />} />
