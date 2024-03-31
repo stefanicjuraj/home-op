@@ -11,7 +11,7 @@ export default function Maintenance() {
     return (
         <>
             <div className="mt-32 mb-16 mx-auto max-w-7xl p-4">
-                <h1 className="text-5xl font-bold">Inventory</h1>
+                <h1 className="text-5xl font-bold">Maintenance</h1>
                 <p className="mt-4 text-xl w-2/3 text-black">
                     Create, manage, and keep track of your household maintenance schedules.
                 </p>
