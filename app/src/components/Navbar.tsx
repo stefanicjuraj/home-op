@@ -98,7 +98,7 @@ export default function Navbar() {
                 <div className="h-full px-3 pb-4 overflow-y-auto bg-white">
                     <ul className="space-y-3 font-normal text-lg">
                         <li>
-                            <Link to="/" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/home")}`}>
+                            <Link to="/" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/")}`}>
                                 <img src={home} alt="bill" className="w-6 h-6" />
                                 <span className="ms-3">My Home</span>
                             </Link>
