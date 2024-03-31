@@ -10,7 +10,7 @@ export default function Login() {
                 onClick={() => signInWithGoogle()
                     .then(user => {
                         console.log('Logged in user:', user);
-                        navigate('/home');
+                        navigate('/');
                     })
                     .catch(error => console.error("Login failed: ", error))}>
                 Sign in with Google
