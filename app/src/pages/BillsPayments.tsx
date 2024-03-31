@@ -7,7 +7,7 @@ import AddPayment from '../components/AddBillsPayments';
 import icon from '/delete.svg';
 import sort from '/sort.svg';
 
-export default function Payments() {
+export default function BillsPayments() {
     const { payments, handleDelete, calculateRemainingDays } = usePayment();
     const [sortPaidFirst, setSortPaidFirst] = useState(true);
     const [sortDueDateAsc, setSortDueDateAsc] = useState(true);
