@@ -11,7 +11,6 @@ export default function BillsPayments() {
     const { payments, handleDelete, calculateRemainingDays } = usePayment();
     const [sortPaidFirst, setSortPaidFirst] = useState(true);
     const [sortDueDateAsc, setSortDueDateAsc] = useState(true);
-    const [showAlert] = useState(false);
 
     const toggleSort = () => {
         setSortPaidFirst(!sortPaidFirst);
@@ -34,19 +33,13 @@ export default function BillsPayments() {
     return (
         <>
             <div className="mt-32 mb-16 mx-auto max-w-7xl p-4">
-                <h1 className="text-5xl font-bold">Bills & Payments</h1>
+                <h1 className="text-5xl font-bold">
+                    Bills & Payments
+                </h1>
                 <p className="mt-4 text-xl w-2/3 text-black">
                     Here you can create, manage, and keep track of your bills, expenses and payments.
                 </p>
             </div>
-
-            {showAlert && (
-                <div className="absolute top-0 left-0 w-full flex justify-center z-50">
-                    <div className="bg-blue-100 border border-blue-400 text-gray-900 px-4 py-3 rounded-lg fixed bottom-10">
-                        <p>Visitor removed successfully!</p>
-                    </div>
-                </div>
-            )}
 
             <AddPayment />
 
@@ -54,19 +47,29 @@ export default function BillsPayments() {
                 <table className="max-w-7xl mx-auto w-full text-left rtl:text-right">
                     <thead className="text-md text-blue-500 uppercase bg-blue-50">
                         <tr>
-                            <th scope="col" className="px-6 py-5">Payment</th>
-                            <th scope="col" className="px-6 py-5">Cost</th>
-                            <th scope="col" className="px-6 py-5">Date Received</th>
+                            <th scope="col" className="px-6 py-5">
+                                Payment
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Cost
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Date Received
+                            </th>
                             <th scope="col" className="px-6 py-5 cursor-pointer" onClick={toggleSortDueDate}>
                                 <img src={sort} className="h-6 w-6 inline-flex" alt="sort" />
                                 Due Date
                             </th>
-                            <th scope="col" className="px-6 py-5">Type</th>
+                            <th scope="col" className="px-6 py-5">
+                                Type
+                            </th>
                             <th scope="col" className="px-6 py-5 cursor-pointer whitespace-nowrap" onClick={toggleSort}>
                                 <img src={sort} className="h-6 w-6 inline-flex" alt="sort" />
                                 Status
                             </th>
-                            <th scope="col" className="px-6 py-5">Action</th>
+                            <th scope="col" className="px-6 py-5">
+                                Action
+                            </th>
                         </tr>
                     </thead>
                     <tbody>

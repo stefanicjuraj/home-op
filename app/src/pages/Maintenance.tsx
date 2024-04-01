@@ -11,7 +11,9 @@ export default function Maintenance() {
     return (
         <>
             <div className="mt-32 mb-16 mx-auto max-w-7xl p-4">
-                <h1 className="text-5xl font-bold">Maintenance</h1>
+                <h1 className="text-5xl font-bold">
+                    Maintenance
+                </h1>
                 <p className="mt-4 text-xl w-2/3 text-black">
                     Create, manage, and keep track of your household maintenance schedules.
                 </p>
@@ -23,10 +25,18 @@ export default function Maintenance() {
                 <table className="max-w-7xl mx-auto w-full text-left rtl:text-right">
                     <thead className="text-md text-blue-500 uppercase bg-blue-50">
                         <tr>
-                            <th scope="col" className="px-6 py-5">Description</th>
-                            <th scope="col" className="px-6 py-5">Assigned To</th>
-                            <th scope="col" className="px-6 py-5">Due Date</th>
-                            <th scope="col" className="px-6 py-5">Completed</th>
+                            <th scope="col" className="px-6 py-5">
+                                Description
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Assigned To
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Due Date
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Completed
+                            </th>
                             <th scope="col" className="px-6 py-5"></th>
                         </tr>
                     </thead>

@@ -11,7 +11,9 @@ export default function Security() {
     return (
         <>
             <div className="mt-32 mb-16 mx-auto max-w-7xl p-4">
-                <h1 className="text-5xl font-bold">Security</h1>
+                <h1 className="text-5xl font-bold">
+                    Security
+                </h1>
                 <p className="mt-4 text-xl w-2/3 text-black">
                     Create, manage, and keep your home safe and secure with security protocols.
                 </p>
@@ -23,9 +25,15 @@ export default function Security() {
                 <table className="max-w-7xl mx-auto w-full text-left rtl:text-right">
                     <thead className="text-md text-blue-500 uppercase bg-blue-50">
                         <tr>
-                            <th scope="col" className="px-6 py-5">Name</th>
-                            <th scope="col" className="px-6 py-5">Description</th>
-                            <th scope="col" className="px-6 py-5">Status</th>
+                            <th scope="col" className="px-6 py-5">
+                                Name
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Description
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Status
+                            </th>
                             <th scope="col" className="px-6 py-5"></th>
                         </tr>
                     </thead>

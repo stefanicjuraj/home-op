@@ -38,15 +38,26 @@ export default function Wishlist() {
                 <table className="max-w-7xl mx-auto w-full text-left rtl:text-right">
                     <thead className="text-md text-blue-500 uppercase bg-blue-50">
                         <tr>
-                            <th scope="col" className="px-6 py-5">Item</th>
-                            <th scope="col" className="px-6 py-5">Amount</th>
-                            <th scope="col" className="px-6 py-5">Cost</th>
-                            <th scope="col" className="px-6 py-5">Date</th>
+                            <th scope="col" className="px-6 py-5">
+                                Item
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Amount
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Cost
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Date
+                            </th>
                             <th scope="col" className="px-6 py-5 cursor-pointer whitespace-nowrap" onClick={toggleSort}>
                                 <img src={sortIcon} className="h-6 w-6 mr-1 inline-flex" alt="sort" />
                                 Type
                             </th>
-                            <th scope="col" className="px-6 py-5">Action</th>
+                            <th scope="col" className="px-6 py-5">
+                                Action
+                            </th>
+                            <th scope="col" className="px-6 py-5"></th>
                         </tr>
                     </thead>
                     <tbody>

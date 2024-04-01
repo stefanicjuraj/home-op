@@ -32,10 +32,18 @@ export default function Visitors() {
                 <table className="max-w-7xl mx-auto w-full text-left rtl:text-right">
                     <thead className="text-md text-blue-500 uppercase bg-blue-50">
                         <tr>
-                            <th scope="col" className="px-6 py-5">Visitor</th>
-                            <th scope="col" className="px-6 py-5">Date</th>
-                            <th scope="col" className="px-6 py-5">Time</th>
-                            <th scope="col" className="px-6 py-5">Ocassion</th>
+                            <th scope="col" className="px-6 py-5">
+                                Visitor
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Date
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Time
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Ocassion
+                            </th>
                             <th scope="col" className="px-6 py-5"></th>
                         </tr>
                     </thead>
@@ -61,7 +69,7 @@ export default function Visitors() {
                                     </span>
                                 </td>
                                 <td className="px-6 py-5">
-                                    <button onClick={() => handleDeleteWithAlert(visitor.id)}> {/* Use handleDeleteWithAlert */}
+                                    <button onClick={() => handleDeleteWithAlert(visitor.id)}>
                                         <img src={icon} className="h-5 w-5" alt="delete" />
                                     </button>
                                 </td>

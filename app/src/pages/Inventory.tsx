@@ -11,7 +11,9 @@ export default function Inventory() {
     return (
         <>
             <div className="mt-32 mb-16 mx-auto max-w-7xl p-4">
-                <h1 className="text-5xl font-bold">Inventory</h1>
+                <h1 className="text-5xl font-bold">
+                    Inventory
+                </h1>
                 <p className="mt-4 text-xl w-2/3 text-black">
                     Create, manage, and keep track of your household items and supplies.
                 </p>
@@ -23,10 +25,18 @@ export default function Inventory() {
                 <table className="max-w-7xl mx-auto w-full text-left rtl:text-right">
                     <thead className="text-md text-blue-500 uppercase bg-blue-50">
                         <tr>
-                            <th scope="col" className="px-6 py-5">Item</th>
-                            <th scope="col" className="px-6 py-5">Amount</th>
-                            <th scope="col" className="px-6 py-5">Expiry date</th>
-                            <th scope="col" className="px-6 py-5">Type</th>
+                            <th scope="col" className="px-6 py-5">
+                                Item
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Amount
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Expiry date
+                            </th>
+                            <th scope="col" className="px-6 py-5">
+                                Type
+                            </th>
                             <th scope="col" className="px-6 py-5"></th>
                         </tr>
                     </thead>
