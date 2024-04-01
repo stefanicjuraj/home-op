@@ -63,14 +63,12 @@ export function usePayment() {
             };
             usersArray = [...usersArray, newUser];
           } else {
-            const updatedPayments = Array.isArray(
-              usersArray[userIndex].payments
-            )
+            const handleUpdates = Array.isArray(usersArray[userIndex].payments)
               ? [...usersArray[userIndex].payments, newPayment]
               : [newPayment];
             usersArray[userIndex] = {
               ...usersArray[userIndex],
-              payments: updatedPayments,
+              payments: handleUpdates,
             };
           }
 
@@ -106,14 +104,14 @@ export function usePayment() {
             (u: { id: string }) => u.id === user.uid
           );
           if (userIndex !== -1) {
-            const updatedPayments = usersArray[userIndex].payments.filter(
+            const handleUpdates = usersArray[userIndex].payments.filter(
               (bill: { id: number }) => bill.id !== billId
             );
 
             const updatedUsers = [...usersArray];
             updatedUsers[userIndex] = {
               ...updatedUsers[userIndex],
-              payments: updatedPayments,
+              payments: handleUpdates,
             };
 
             transaction.update(documentRef, { users: updatedUsers });
@@ -122,6 +120,34 @@ export function usePayment() {
       });
     } catch (error) {
       console.error("Error deleting bill:", error);
+    }
+  };
+
+  const handleUpdate = async (paymentId: number, isPaid: unknown) => {
+    if (!user) return;
+
+    const documentRef = doc(db, "collection", "document");
+    try {
+      await runTransaction(db, async (transaction) => {
+        const document = await transaction.get(documentRef);
+        if (document.exists()) {
+          const usersArray = document.data().users;
+          const userIndex = usersArray.findIndex(
+            (u: { id: string }) => u.id === user.uid
+          );
+          if (userIndex !== -1) {
+            const paymentIndex = usersArray[userIndex].payments.findIndex(
+              (p: { id: number }) => p.id === paymentId
+            );
+            if (paymentIndex !== -1) {
+              usersArray[userIndex].payments[paymentIndex].isPaid = isPaid;
+              transaction.update(documentRef, { users: usersArray });
+            }
+          }
+        }
+      });
+    } catch (error) {
+      console.error("Error updating payment status:", error);
     }
   };
 
@@ -161,6 +187,17 @@ export function usePayment() {
     }
   };
 
+  const togglePaymentStatus = async (paymentId: number, newStatus: boolean) => {
+    const handleUpdates = payments.map((payment) => {
+      if (payment.id === paymentId) {
+        return { ...payment, isPaid: newStatus };
+      }
+      return payment;
+    });
+    setPayments(handleUpdates);
+    await handleUpdate(paymentId, newStatus);
+  };
+
   return {
     newPayment,
     setNewPayment,
@@ -170,5 +207,6 @@ export function usePayment() {
     handleSubmit,
     handleDelete,
     calculateRemainingDays,
+    togglePaymentStatus,
   };
 }
