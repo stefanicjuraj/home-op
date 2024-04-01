@@ -8,7 +8,7 @@ import icon from '/delete.svg';
 import sort from '/sort.svg';
 
 export default function BillsPayments() {
-    const { payments, handleDelete, calculateRemainingDays } = usePayment();
+    const { payments, handleDelete, calculateRemainingDays, togglePaymentStatus } = usePayment();
     const [sortPaidFirst, setSortPaidFirst] = useState(true);
     const [sortDueDateAsc, setSortDueDateAsc] = useState(true);
 
@@ -103,7 +103,11 @@ export default function BillsPayments() {
                                     </span>
                                 </td>
                                 <td className="px-6 py-5">
-                                    {payment.isPaid ? " Paid" : "Not Paid"}
+                                    <button
+                                        className={`px-4 py-2 rounded-xl ${payment.isPaid ? 'bg-green-200' : 'bg-red-200'}`}
+                                        onClick={() => togglePaymentStatus(payment.id, !payment.isPaid)}>
+                                        {payment.isPaid ? "Paid" : "Not Paid"}
+                                    </button>
                                 </td>
                                 <td className="px-6 py-5">
                                     <button onClick={() => handleDelete(payment.id)}>
