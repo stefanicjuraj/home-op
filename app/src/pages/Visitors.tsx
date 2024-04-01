@@ -32,11 +32,11 @@ export default function Visitors() {
                 <table className="max-w-7xl mx-auto w-full text-left rtl:text-right">
                     <thead className="text-md text-blue-500 uppercase bg-blue-50">
                         <tr>
-                            <th scope="col" className="px-6 py-3">Visitor</th>
-                            <th scope="col" className="px-6 py-3">Date</th>
-                            <th scope="col" className="px-6 py-3">Time</th>
-                            <th scope="col" className="px-6 py-3">Ocassion</th>
-                            <th scope="col" className="px-6 py-3"></th>
+                            <th scope="col" className="px-6 py-5">Visitor</th>
+                            <th scope="col" className="px-6 py-5">Date</th>
+                            <th scope="col" className="px-6 py-5">Time</th>
+                            <th scope="col" className="px-6 py-5">Ocassion</th>
+                            <th scope="col" className="px-6 py-5"></th>
                         </tr>
                     </thead>
                     <tbody>

@@ -23,11 +23,11 @@ export default function Inventory() {
                 <table className="max-w-7xl mx-auto w-full text-left rtl:text-right">
                     <thead className="text-md text-blue-500 uppercase bg-blue-50">
                         <tr>
-                            <th scope="col" className="px-6 py-3">Item</th>
-                            <th scope="col" className="px-6 py-3">Amount</th>
-                            <th scope="col" className="px-6 py-3">Expiry date</th>
-                            <th scope="col" className="px-6 py-3">Type</th>
-                            <th scope="col" className="px-6 py-3"></th>
+                            <th scope="col" className="px-6 py-5">Item</th>
+                            <th scope="col" className="px-6 py-5">Amount</th>
+                            <th scope="col" className="px-6 py-5">Expiry date</th>
+                            <th scope="col" className="px-6 py-5">Type</th>
+                            <th scope="col" className="px-6 py-5"></th>
                         </tr>
                     </thead>
                     <tbody>

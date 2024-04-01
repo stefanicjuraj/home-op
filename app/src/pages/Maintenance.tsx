@@ -23,11 +23,11 @@ export default function Maintenance() {
                 <table className="max-w-7xl mx-auto w-full text-left rtl:text-right">
                     <thead className="text-md text-blue-500 uppercase bg-blue-50">
                         <tr>
-                            <th scope="col" className="px-6 py-3">Description</th>
-                            <th scope="col" className="px-6 py-3">Assigned To</th>
-                            <th scope="col" className="px-6 py-3">Due Date</th>
-                            <th scope="col" className="px-6 py-3">Completed</th>
-                            <th scope="col" className="px-6 py-3"></th>
+                            <th scope="col" className="px-6 py-5">Description</th>
+                            <th scope="col" className="px-6 py-5">Assigned To</th>
+                            <th scope="col" className="px-6 py-5">Due Date</th>
+                            <th scope="col" className="px-6 py-5">Completed</th>
+                            <th scope="col" className="px-6 py-5"></th>
                         </tr>
                     </thead>
                     <tbody>
