@@ -30,6 +30,8 @@ export default function BillsPayments() {
         return aDueDate - bDueDate;
     });
 
+    const totalCost = sortPayments.reduce((acc, payment) => acc + payment.amount, 0);
+
     return (
         <>
             <div className="mt-32 mb-16 mx-auto max-w-7xl p-4">
@@ -110,6 +112,14 @@ export default function BillsPayments() {
                                 </td>
                             </tr>
                         ))}
+                        <tr className="bg-white uppercase font-bold">
+                            <td className="px-6 py-5 text-blue-500 bg-blue-50" colSpan={1}>
+                                Total cost
+                            </td>
+                            <td className="px-6 py-5">
+                                - {totalCost.toLocaleString()}
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
