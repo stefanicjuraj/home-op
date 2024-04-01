@@ -1,4 +1,5 @@
 body {
+  background-color: #f9f9f9;
   scroll-behavior: smooth;
   /* disable user select */
   user-select: none;
