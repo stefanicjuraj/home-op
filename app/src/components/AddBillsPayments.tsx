@@ -28,7 +28,13 @@ export default function AddBillsPayments() {
                         <div className="absolute inset-y-0 start-0 top-0 flex items-center ps-3 pointer-events-none">
                             <img src={cost} className="h-6 w-6" />
                         </div>
-                        <input className="block p-3.5 w-full z-20 ps-10 text-sm text-gray-900 rounded-md border border-gray-500 focus:border-blue-500 focus:ring-offset-gray-100" type="number" id="amount" name="amount" placeholder="Amount" value={newPayment.amount} onChange={handleInputChange} required />
+                        <input className="block p-3.5 w-full z-20 ps-10 text-sm text-gray-900 rounded-md border border-gray-500 focus:border-blue-500 focus:ring-offset-gray-100"
+                        type="number"
+                        id="amount"
+                        name="amount"
+                        value={newPayment.amount}
+                        onChange={handleInputChange}
+                        required />
                     </div>
                 </div>
                 <div className="flex-1 min-w-[35%] sm:min-w-[10%] mr-2 my-2">
