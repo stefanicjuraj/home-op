@@ -10,14 +10,9 @@ import sort from '/sort.svg';
 export default function BillsPayments() {
     const { payments, handleDelete, calculateRemainingDays, togglePaymentStatus } = usePayment();
     const [sortPaidFirst, setSortPaidFirst] = useState(true);
-    const [sortDueDateAsc, setSortDueDateAsc] = useState(true);
 
     const toggleSort = () => {
         setSortPaidFirst(!sortPaidFirst);
-    };
-
-    const toggleSortDueDate = () => {
-        setSortDueDateAsc(!sortDueDateAsc);
     };
 
     const sortPayments = payments.sort((a, b) => {
@@ -58,8 +53,7 @@ export default function BillsPayments() {
                             <th scope="col" className="px-6 py-5">
                                 Date Received
                             </th>
-                            <th scope="col" className="px-6 py-5 cursor-pointer" onClick={toggleSortDueDate}>
-                                <img src={sort} className="h-6 w-6 inline-flex" alt="sort" />
+                            <th scope="col" className="px-6 py-5">
                                 Due Date
                             </th>
                             <th scope="col" className="px-6 py-5">
