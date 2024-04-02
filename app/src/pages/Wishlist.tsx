@@ -1,27 +1,12 @@
-import { useState } from 'react';
 // Hooks
 import { useWishlist } from '../hooks/useWishlist';
 // Components
 import WishlistForm from '../components/AddWishlist';
 // Icons
 import deleteIcon from '/delete.svg';
-import sortIcon from '/sort.svg';
 
 export default function Wishlist() {
     const { wishlistItems, handleDelete } = useWishlist();
-    const [sortTypeFirst, setSortTypeFirst] = useState(true);
-
-    const toggleSort = () => {
-        setSortTypeFirst(!sortTypeFirst);
-    };
-
-    const sortedWishlistItems = wishlistItems.sort((a, b) => {
-        if (sortTypeFirst) {
-            return a.type.localeCompare(b.type);
-        } else {
-            return b.type.localeCompare(a.type);
-        }
-    });
 
     return (
         <>
@@ -50,15 +35,14 @@ export default function Wishlist() {
                             <th scope="col" className="px-6 py-5">
                                 Date
                             </th>
-                            <th scope="col" className="px-6 py-5 cursor-pointer whitespace-nowrap" onClick={toggleSort}>
-                                <img src={sortIcon} className="h-6 w-6 mr-1 inline-flex" alt="sort" />
+                            <th scope="col" className="px-6 py-5 whitespace-nowrap">
                                 Type
                             </th>
                             <th scope="col" className="px-6 py-5"></th>
                         </tr>
                     </thead>
                     <tbody>
-                        {sortedWishlistItems.map((item, index) => (
+                        {wishlistItems.map((item, index) => (
                             <tr key={index} className="bg-white border-b text-gray-900">
                                 <td className="px-6 py-5 whitespace-nowrap">
                                     {item.item || ""}
