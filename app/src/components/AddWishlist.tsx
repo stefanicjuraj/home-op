@@ -9,7 +9,7 @@ export default function AddWishlist() {
         <div className="mx-auto mb-8 max-w-7xl px-4">
             <form onSubmit={handleSubmit} className="flex flex-wrap items-center justify-between">
                 <div className="flex-1 min-w-[35%] sm:min-w-[10%] mr-2 my-2">
-                    <label htmlFor="payment" className="block mb-1 text-gray-500 text-sm">Item</label>
+                    <label htmlFor="item" className="block mb-1 text-gray-500 text-sm">Item</label>
                     <input className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
                         type="text"
                         id="item"
@@ -22,7 +22,7 @@ export default function AddWishlist() {
                     />
                 </div>
                 <div className="flex-1 min-w-[20%] sm:min-w-[10%] mr-2 my-2">
-                    <label htmlFor="payment" className="block mb-1 text-gray-500 text-sm">Amount</label>
+                    <label htmlFor="amount" className="block mb-1 text-gray-500 text-sm">Amount</label>
                     <input className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
                         type="number"
                         id="amount"
@@ -50,7 +50,7 @@ export default function AddWishlist() {
                     </div>
                 </div>
                 <div className="flex-1 min-w-[30%] sm:min-w-[10%] mr-2 my-2">
-                    <label htmlFor="payment" className="block mb-1 text-gray-500 text-sm">Date</label>
+                    <label htmlFor="date" className="block mb-1 text-gray-500 text-sm">Date</label>
                     <input className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
                         type="date"
                         id="date"
@@ -76,7 +76,8 @@ export default function AddWishlist() {
                     </select>
                 </div>
                 <button className="w-16 border bg-blue-500 text-white text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 mt-8 p-3 my-2 mr-2"
-                    type="submit">Add
+                    type="submit">
+                    Add
                 </button>
             </form>
         </div>

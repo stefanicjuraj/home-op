@@ -7,7 +7,7 @@ export default function AddVisitor() {
         <div className="mx-auto mb-8 max-w-7xl px-4">
             <form onSubmit={handleSubmit} className="flex flex-wrap items-center justify-between">
                 <div className="flex-1 min-w-[40%] md:min-w-[30%] mr-2">
-                    <label htmlFor="payment" className="block mb-1 text-gray-500 text-sm">Visitor name</label>
+                    <label htmlFor="name" className="block mb-1 text-gray-500 text-sm">Visitor name</label>
                     <input className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
                         type="text"
                         name="name"
@@ -19,7 +19,7 @@ export default function AddVisitor() {
                     />
                 </div>
                 <div className="flex-1 min-w-[40%] md:min-w-[20%] mr-2">
-                    <label htmlFor="payment" className="block mb-1 text-gray-500 text-sm">Date of arrival</label>
+                    <label htmlFor="date" className="block mb-1 text-gray-500 text-sm">Date of arrival</label>
                     <input className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
                         type="date"
                         name="date"
@@ -29,7 +29,7 @@ export default function AddVisitor() {
                     />
                 </div>
                 <div className="flex-1 min-w-[40%] md:min-w-[20%] mr-2">
-                    <label htmlFor="payment" className="block mb-1 text-gray-500 text-sm">Time of arrival</label>
+                    <label htmlFor="time" className="block mb-1 text-gray-500 text-sm">Time of arrival</label>
                     <input className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
                         id="time"
                         type="time"
@@ -39,9 +39,8 @@ export default function AddVisitor() {
                         required
                     />
                 </div>
-                {/* Occasion */}
                 <div className="flex-1 min-w-[30%] md:min-w-[10%] mr-2">
-                    <label htmlFor="isPaid" className="block mb-1 text-gray-500 text-sm">Occasion</label>
+                    <label htmlFor="occasion" className="block mb-1 text-gray-500 text-sm">Occasion</label>
                     <select className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
                         name="occasion"
                         value={newVisitor.occasion}
@@ -56,9 +55,9 @@ export default function AddVisitor() {
                         <option value="Hangout">Hangout</option>
                     </select>
                 </div>
-                {/* Add */}
                 <button className="w-16 border bg-blue-500 text-white text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 mt-8 p-3 my-2 mr-2"
-                    type="submit">Add
+                    type="submit">
+                    Add
                 </button>
             </form >
         </div >

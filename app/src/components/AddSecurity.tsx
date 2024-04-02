@@ -15,7 +15,7 @@ export default function AddSecurity() {
         <div className="mx-auto mb-8 max-w-7xl px-4">
             <form onSubmit={handleSubmit} className="flex flex-wrap items-center justify-between">
                 <div className="flex-1 min-w-[50%] md:min-w-[35%] mr-2 my-2">
-                    <label htmlFor="payment" className="block mb-1 text-gray-500 text-sm">Security protocol</label>
+                    <label htmlFor="name" className="block mb-1 text-gray-500 text-sm">Security protocol</label>
                     <input className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
                         type="text"
                         name="name"
@@ -27,7 +27,7 @@ export default function AddSecurity() {
                     />
                 </div>
                 <div className="flex-1 min-w-[25%] md:min-w-[35%] mr-2 my-2">
-                    <label htmlFor="payment" className="block mb-1 text-gray-500 text-sm">Description</label>
+                    <label htmlFor="description" className="block mb-1 text-gray-500 text-sm">Description</label>
                     <input className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
                         type="text"
                         name="description"
@@ -39,7 +39,7 @@ export default function AddSecurity() {
                     />
                 </div>
                 <div className="flex-1 min-w-[25%] md:min-w-[10%] mr-2">
-                    <label htmlFor="isPaid" className="block mb-1 text-gray-500 text-sm">Status</label>
+                    <label htmlFor="isEnabled" className="block mb-1 text-gray-500 text-sm">Status</label>
                     <select className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
                         name="isEnabled"
                         value={newSecurityProtocol.isEnabled.toString()}
@@ -51,7 +51,8 @@ export default function AddSecurity() {
                     </select>
                 </div>
                 <button className="w-16 border bg-blue-500 text-white text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 mt-8 p-3 my-2 mr-2"
-                    type="submit">Add
+                    type="submit">
+                    Add
                 </button>
             </form>
         </div>

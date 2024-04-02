@@ -29,12 +29,12 @@ export default function AddBillsPayments() {
                             <img src={cost} className="h-6 w-6" />
                         </div>
                         <input className="block p-3.5 w-full z-20 ps-10 text-sm text-gray-900 rounded-md border border-gray-500 focus:border-blue-500 focus:ring-offset-gray-100"
-                        type="number"
-                        id="amount"
-                        name="amount"
-                        value={newPayment.amount}
-                        onChange={handleInputChange}
-                        required />
+                            type="number"
+                            id="amount"
+                            name="amount"
+                            value={newPayment.amount}
+                            onChange={handleInputChange}
+                            required />
                     </div>
                 </div>
                 <div className="flex-1 min-w-[35%] sm:min-w-[10%] mr-2 my-2">
@@ -88,7 +88,8 @@ export default function AddBillsPayments() {
                     </select>
                 </div>
                 <button className="w-16 bg-blue-500 text-white text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 mt-8 p-3 my-2 mr-2"
-                    type="submit">Add
+                    type="submit">
+                    Add
                 </button>
             </form>
 
