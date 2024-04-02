@@ -54,9 +54,6 @@ export default function Wishlist() {
                                 <img src={sortIcon} className="h-6 w-6 mr-1 inline-flex" alt="sort" />
                                 Type
                             </th>
-                            <th scope="col" className="px-6 py-5">
-                                Action
-                            </th>
                             <th scope="col" className="px-6 py-5"></th>
                         </tr>
                     </thead>
