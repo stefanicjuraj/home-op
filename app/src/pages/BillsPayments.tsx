@@ -1,19 +1,12 @@
-import { useState } from 'react';
 // Hooks
 import { usePayment } from '../hooks/usePayment';
 // Components
 import AddPayment from '../components/AddBillsPayments';
 // Icons
 import icon from '/delete.svg';
-import sort from '/sort.svg';
 
 export default function BillsPayments() {
     const { payments, handleDelete, calculateRemainingDays, togglePaymentStatus } = usePayment();
-    const [sortPaidFirst, setSortPaidFirst] = useState(true);
-
-    const toggleSort = () => {
-        setSortPaidFirst(!sortPaidFirst);
-    };
 
     const sortPayments = payments.sort((a, b) => {
         if (a.isPaid !== b.isPaid) {
@@ -59,8 +52,7 @@ export default function BillsPayments() {
                             <th scope="col" className="px-6 py-5">
                                 Type
                             </th>
-                            <th scope="col" className="px-6 py-5 cursor-pointer whitespace-nowrap" onClick={toggleSort}>
-                                <img src={sort} className="h-6 w-6 inline-flex" alt="sort" />
+                            <th scope="col" className="px-6 py-5 cursor-pointer whitespace-nowrap">
                                 Status
                             </th>
                             <th scope="col" className="px-6 py-5">
