@@ -19,7 +19,7 @@ As I am sharing a similar process to many students finishing their studies, the 
 <br />
 
 <div align="center">
-    <img src="/app/public/HomeOp.png" width="75%">
+    <img src="/app/public/bills-payments.png" width="75%">
 </div>
 
 <br />
