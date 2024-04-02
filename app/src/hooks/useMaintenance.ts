@@ -10,6 +10,7 @@ import { sanitize } from "../utils/sanitize";
 export function useMaintenance() {
   const [maintenance, setMaintenance] = useState<Maintenance[]>([]);
   const [user] = useAuthState(auth);
+  const [showDeleteAlert, setShowDeleteAlert] = useState(false);
 
   const [newMaintenanceTask, setNewMaintenanceTask] = useState({
     id: Date.now(),
@@ -131,6 +132,9 @@ export function useMaintenance() {
     } catch (error) {
       console.error("Error deleting maintenance task:", error);
     }
+
+    setShowDeleteAlert(true);
+    setTimeout(() => setShowDeleteAlert(false), 1000);
   };
 
   const handleUpdate = async (taskId: number, newStatus: boolean) => {
@@ -216,6 +220,7 @@ export function useMaintenance() {
     handleSubmit,
     handleDelete,
     formatDateForInput,
-    toggleCompletionStatus
+    toggleCompletionStatus,
+    showDeleteAlert
   };
 }

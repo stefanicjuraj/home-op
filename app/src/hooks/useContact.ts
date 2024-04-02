@@ -11,6 +11,7 @@ import { sanitize } from "../utils/sanitize";
 export const useContact = () => {
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [user, loading, error] = useAuthState(auth);
+  const [showDeleteAlert, setShowDeleteAlert] = useState(false);
 
   const [newContacts, setNewContacts] = useState<Contact>({
     id: Date.now(),
@@ -80,6 +81,9 @@ export const useContact = () => {
     } catch (error) {
       console.error("Error deleting emergency contact.");
     }
+
+    setShowDeleteAlert(true);
+    setTimeout(() => setShowDeleteAlert(false), 1000);
   };
 
   useEffect(() => {
@@ -104,5 +108,6 @@ export const useContact = () => {
     handleDelete,
     loading,
     error,
+    showDeleteAlert,
   };
 };

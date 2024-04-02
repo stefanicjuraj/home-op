@@ -11,6 +11,7 @@ import { sanitize } from "../utils/sanitize";
 export const useSecurity = () => {
   const [security, setSecurity] = useState<Security[]>([]);
   const [user, loading, error] = useAuthState(auth);
+  const [showDeleteAlert, setShowDeleteAlert] = useState(false);
 
   const [newSecurityProtocol, setNewSecurityProtocol] = useState<Security>({
     id: Date.now(),
@@ -97,6 +98,9 @@ export const useSecurity = () => {
     } catch (error) {
       console.error("Error deleting security protocol:", error);
     }
+
+    setShowDeleteAlert(true);
+    setTimeout(() => setShowDeleteAlert(false), 1000);
   };
 
   const handleUpdate = async (protocolId: number, newStatus: boolean) => {
@@ -172,5 +176,6 @@ export const useSecurity = () => {
     loading,
     error,
     toggleSecurityStatus,
+    showDeleteAlert,
   };
 };

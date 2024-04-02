@@ -12,6 +12,7 @@ import { sanitize } from "../utils/sanitize";
 export function useWishlist() {
   const [wishlistItems, setWishlistItems] = useState<Wishlist[]>([]);
   const [user] = useAuthState(auth);
+  const [showDeleteAlert, setShowDeleteAlert] = useState(false);
 
   const [newWishlistItem, setNewWishlistItem] = useState({
     id: Date.now(),
@@ -132,6 +133,9 @@ export function useWishlist() {
     } catch (error) {
       console.error("Error deleting item from wishlist:", error);
     }
+
+    setShowDeleteAlert(true);
+    setTimeout(() => setShowDeleteAlert(false), 1000);
   };
 
   useEffect(() => {
@@ -160,5 +164,6 @@ export function useWishlist() {
     formatDateInput,
     handleSubmit,
     handleDelete,
+    showDeleteAlert,
   };
 }

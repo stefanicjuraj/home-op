@@ -12,6 +12,7 @@ import { sanitize } from "../utils/sanitize";
 export function useInventory() {
   const [inventory, setInventory] = useState<Inventory[]>([]);
   const [user] = useAuthState(auth);
+  const [showDeleteAlert, setShowDeleteAlert] = useState(false);
 
   const [newInventory, setNewInventory] = useState({
     id: Date.now(),
@@ -135,6 +136,9 @@ export function useInventory() {
     } catch (error) {
       console.error("Error deleting bill:", error);
     }
+
+    setShowDeleteAlert(true);
+    setTimeout(() => setShowDeleteAlert(false), 1000);
   };
 
   useEffect(() => {
@@ -177,5 +181,6 @@ export function useInventory() {
     handleSubmit,
     formatDateInput,
     calculateRemainingDays,
+    showDeleteAlert,
   };
 }
