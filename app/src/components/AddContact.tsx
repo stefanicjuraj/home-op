@@ -1,6 +1,8 @@
 import { useContact } from "../hooks/useContact";
+// Icons
 import phone from "/phone.svg";
 import contact from "/user.svg";
+import address from "/address.svg";
 
 export default function AddContact() {
     const { newContacts, handleInputChange, handleSubmit } = useContact();
@@ -43,15 +45,20 @@ export default function AddContact() {
                 </div>
                 <div className="flex-1 min-w-[50%] md:min-w-[45%] mr-2 my-2">
                     <label htmlFor="payment" className="block mb-1 text-gray-500 text-sm">Address</label>
-                    <input className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
-                        type="text"
-                        name="address"
-                        placeholder="Address"
-                        value={newContacts.address}
-                        onChange={handleInputChange}
-                        maxLength={40}
-                        required
-                    />
+                    <div className="relative w-full">
+                        <div className="absolute inset-y-0 start-0 top-0 flex items-center ps-3 pointer-events-none">
+                            <img src={address} className="h-6 w-6" />
+                        </div>
+                        <input className="w-full z-20 ps-10 rounded-md border border-gray-500 focus:border-blue-500 p-3"
+                            type="text"
+                            name="address"
+                            placeholder="Address"
+                            value={newContacts.address}
+                            onChange={handleInputChange}
+                            maxLength={40}
+                            required
+                        />
+                    </div>
                 </div>
                 <button className="w-16 border bg-blue-500 text-white text-md rounded-lg focus:ring-blue-500 focus:border-blue-500 mt-8 p-3 my-2 mr-2"
                     type="submit">Add
