@@ -12,16 +12,16 @@ export default function Landing() {
 
     return (
         <>
-            <section className="bg-white">
+            <section>
                 <div className="py-16 px-16 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
                     <h1 className="mt-24 mb-4 text-center text-7xl text-blue-500 font-bold">
                         HomeOp
                     </h1>
-                    <p className="text-center text-[#000] text-2xl mx-auto mt-16 mb-16 w-4/5">
+                    <p className="text-center text-[#000] text-2xl mx-auto mt-16 mb-16 sm:w-4/5 w-full">
                         Create, manage, plan and keep track of your upcoming bills and payments, home inventory, invited visitors, important contacts, security protocols, household maintenance, and home wishlist.
                     </p>
                     <Login />
-                    <div className="text-[#000] space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+                    <div className="text-[#000] space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-16 md:space-y-0">
                         <div>
                             <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-500 lg:h-16 lg:w-16">
                                 <img src={bill} alt="dropdown" className="w-8 h-8" />
