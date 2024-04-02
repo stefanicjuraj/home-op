@@ -99,6 +99,35 @@ export const useSecurity = () => {
     }
   };
 
+  const handleUpdate = async (protocolId: number, newStatus: boolean) => {
+    if (!user) return;
+
+    const documentRef = doc(db, "collection", "document");
+    try {
+      await runTransaction(db, async (transaction) => {
+        const document = await transaction.get(documentRef);
+        if (document.exists()) {
+          const usersArray = document.data().users;
+          const userIndex = usersArray.findIndex(
+            (u: { id: string }) => u.id === user.uid
+          );
+          if (userIndex !== -1) {
+            const protocolIndex = usersArray[userIndex].security.findIndex(
+              (protocol: { id: number }) => protocol.id === protocolId
+            );
+            if (protocolIndex !== -1) {
+              usersArray[userIndex].security[protocolIndex].isEnabled =
+                newStatus;
+              transaction.update(documentRef, { users: usersArray });
+            }
+          }
+        }
+      });
+    } catch (error) {
+      console.error("Error updating security status:", error);
+    }
+  };
+
   useEffect(() => {
     const unsubscribe = user
       ? onSnapshot(doc(db, "collection", "document"), (document) => {
@@ -117,6 +146,22 @@ export const useSecurity = () => {
     return () => unsubscribe();
   }, [user]);
 
+  const toggleSecurityStatus = async (
+    protocolId: number,
+    newStatus: boolean
+  ) => {
+    setSecurity(
+      security.map((protocol) => {
+        if (protocol.id === protocolId) {
+          return { ...protocol, isEnabled: newStatus };
+        }
+        return protocol;
+      })
+    );
+
+    await handleUpdate(protocolId, newStatus);
+  };
+
   return {
     security,
     newSecurityProtocol,
@@ -126,5 +171,6 @@ export const useSecurity = () => {
     handleDelete,
     loading,
     error,
+    toggleSecurityStatus,
   };
 };
