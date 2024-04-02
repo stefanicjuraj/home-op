@@ -133,7 +133,35 @@ export function useMaintenance() {
     }
   };
 
-  // Effects
+  const handleUpdate = async (taskId: number, newStatus: boolean) => {
+    if (!user) return;
+
+    const documentRef = doc(db, "collection", "document");
+    try {
+      await runTransaction(db, async (transaction) => {
+        const document = await transaction.get(documentRef);
+        if (document.exists()) {
+          const usersArray = document.data().users;
+          const userIndex = usersArray.findIndex(
+            (u: { id: string }) => u.id === user.uid
+          );
+          if (userIndex !== -1) {
+            const taskIndex = usersArray[userIndex].maintenanceTasks.findIndex(
+              (task: { id: number }) => task.id === taskId
+            );
+            if (taskIndex !== -1) {
+              usersArray[userIndex].maintenanceTasks[taskIndex].isCompleted =
+                newStatus;
+              transaction.update(documentRef, { users: usersArray });
+            }
+          }
+        }
+      });
+    } catch (error) {
+      console.error("Error updating maintenance task status:", error);
+    }
+  };
+
   useEffect(() => {
     const unsubscribe = user
       ? onSnapshot(doc(db, "collection", "document"), (document) => {
@@ -167,6 +195,19 @@ export function useMaintenance() {
     }/${year}`;
   };
 
+  const toggleCompletionStatus = async (taskId: number, newStatus: boolean) => {
+    setMaintenance(
+      maintenance.map((task) => {
+        if (task.id === taskId) {
+          return { ...task, isCompleted: newStatus };
+        }
+        return task;
+      })
+    );
+
+    await handleUpdate(taskId, newStatus);
+  };
+
   return {
     newMaintenanceTask,
     setNewMaintenanceTask,
@@ -175,5 +216,6 @@ export function useMaintenance() {
     handleSubmit,
     handleDelete,
     formatDateForInput,
+    toggleCompletionStatus
   };
 }
