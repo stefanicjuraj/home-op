@@ -7,6 +7,7 @@ import { auth, db } from "../services/firebase";
 import { Payment } from "../types/payment";
 // Utils
 import { formatDateInput } from "../utils/formatDate";
+import { sanitize } from "../utils/sanitize";
 
 export function usePayment() {
   const [payments, setPayments] = useState<Payment[]>([]);
@@ -27,16 +28,27 @@ export function usePayment() {
 
     if (name === "dateReceived" || name === "dueDate") {
       const date = new Date(value);
-
       setNewPayment((prevState) => ({
         ...prevState,
         [name]: Timestamp.fromDate(date),
       }));
     } else {
-      setNewPayment((prevState) => ({
-        ...prevState,
-        [name]: name === "amount" ? Number(value) : value,
-      }));
+      if (name === "payment" || name === "type") {
+        const sanitizeValue = sanitize(value);
+        if (sanitizeValue !== null) {
+          setNewPayment((prevState) => ({
+            ...prevState,
+            [name]: sanitizeValue,
+          }));
+        } else {
+          console.error("Invalid input.");
+        }
+      } else {
+        setNewPayment((prevState) => ({
+          ...prevState,
+          [name]: name === "amount" ? Number(value) : value,
+        }));
+      }
     }
   };
 

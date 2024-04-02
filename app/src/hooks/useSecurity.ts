@@ -5,6 +5,8 @@ import { doc, onSnapshot, runTransaction } from "firebase/firestore";
 import { db, auth } from "../services/firebase";
 // Types
 import { Security } from "../types/security";
+// Utils
+import { sanitize } from "../utils/sanitize";
 
 export const useSecurity = () => {
   const [security, setSecurity] = useState<Security[]>([]);
@@ -20,10 +22,15 @@ export const useSecurity = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
-    setNewSecurityProtocol((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
+    const sanitizeValue = sanitize(value);
+    if (sanitizeValue !== null) {
+      setNewSecurityProtocol((prevState) => ({
+        ...prevState,
+        [name]: sanitizeValue,
+      }));
+    } else {
+      console.error("Invalid input.");
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

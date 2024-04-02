@@ -5,6 +5,8 @@ import { doc, Timestamp, onSnapshot, runTransaction } from "firebase/firestore";
 import { db, auth } from "../services/firebase";
 // Types
 import { Visitor } from "../types/visitors";
+// Utils
+import { sanitize } from "../utils/sanitize";
 
 export const useVisitor = () => {
   const [visitors, setVisitors] = useState<Visitor[]>([]);
@@ -25,12 +27,19 @@ export const useVisitor = () => {
     const { name, value, type } = e.target;
     let newValue: unknown = value;
 
-    if (type === "date" || type === "time") {
-      newValue = type === "date" ? Timestamp.fromDate(new Date(value)) : value;
-    } else if (name === "amount") {
+    if (type === "text") {
+      const sanitizeValue = sanitize(value);
+      if (sanitizeValue !== null) {
+        newValue = sanitizeValue;
+      } else {
+        console.error("Invalid input detected for ", name);
+        return;
+      }
+    } else if (type === "date") {
+      newValue = Timestamp.fromDate(new Date(value));
+    } else if (type === "number" || name === "amount") {
       newValue = Number(value);
     }
-
     setNewVisitor((prevState) => ({
       ...prevState,
       [name]: newValue,

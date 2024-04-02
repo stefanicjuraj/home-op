@@ -5,6 +5,8 @@ import { doc, onSnapshot, runTransaction } from "firebase/firestore";
 import { db, auth } from "../services/firebase";
 // Types
 import { Contact } from "../types/contact";
+// Utils
+import { sanitize } from "../utils/sanitize";
 
 export const useContact = () => {
   const [contacts, setContacts] = useState<Contact[]>([]);
@@ -20,10 +22,15 @@ export const useContact = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
 
-    setNewContacts((prevState: Contact) => ({
-      ...prevState,
-      [name]: value,
-    }));
+    const sanitizeValue = sanitize(value);
+    if (sanitizeValue !== null) {
+      setNewContacts((prevState: Contact) => ({
+        ...prevState,
+        [name]: sanitizeValue,
+      }));
+    } else {
+      console.error("Invalid input.");
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

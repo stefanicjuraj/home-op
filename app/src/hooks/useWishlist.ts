@@ -7,6 +7,7 @@ import { auth, db } from "../services/firebase";
 import { Wishlist } from "../types/wishlist";
 // Utils
 import { formatDateInput } from "../utils/formatDate";
+import { sanitize } from "../utils/sanitize";
 
 export function useWishlist() {
   const [wishlistItems, setWishlistItems] = useState<Wishlist[]>([]);
@@ -27,8 +28,18 @@ export function useWishlist() {
     const { name, value, type } = e.target;
     let newValue: unknown = value;
 
-    if (type === "date" || type === "time") {
-      newValue = type === "date" ? Timestamp.fromDate(new Date(value)) : value;
+    if (type === "text") {
+      const sanitizeValue = sanitize(value);
+      if (sanitizeValue !== null) {
+        newValue = sanitizeValue;
+      } else {
+        console.error("Invalid input.");
+        return;
+      }
+    } else if (type === "date") {
+      newValue = Timestamp.fromDate(new Date(value));
+    } else if (type === "time") {
+      newValue = value;
     } else if (name === "amount") {
       newValue = Number(value);
     }

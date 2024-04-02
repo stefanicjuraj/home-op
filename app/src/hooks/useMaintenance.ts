@@ -5,6 +5,7 @@ import { doc, onSnapshot, runTransaction } from "firebase/firestore";
 import { auth, db } from "../services/firebase";
 // Types
 import { Maintenance } from "../types/maintenance";
+import { sanitize } from "../utils/sanitize";
 
 export function useMaintenance() {
   const [maintenance, setMaintenance] = useState<Maintenance[]>([]);
@@ -22,16 +23,29 @@ export function useMaintenance() {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
+
     if (name === "isCompleted") {
       setNewMaintenanceTask((prevState) => ({
         ...prevState,
         [name]: value === "true",
       }));
     } else {
-      setNewMaintenanceTask((prevState) => ({
-        ...prevState,
-        [name]: value,
-      }));
+      if (["textFieldName1", "textFieldName2"].includes(name)) {
+        const sanitizeValue = sanitize(value);
+        if (sanitizeValue !== null) {
+          setNewMaintenanceTask((prevState) => ({
+            ...prevState,
+            [name]: sanitizeValue,
+          }));
+        } else {
+          console.error("Invalid input");
+        }
+      } else {
+        setNewMaintenanceTask((prevState) => ({
+          ...prevState,
+          [name]: value,
+        }));
+      }
     }
   };
 

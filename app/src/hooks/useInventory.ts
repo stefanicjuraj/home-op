@@ -7,6 +7,7 @@ import { auth, db } from "../services/firebase";
 import { Inventory } from "../types/inventory";
 // Utils
 import { formatDateInput } from "../utils/formatDate";
+import { sanitize } from "../utils/sanitize";
 
 export function useInventory() {
   const [inventory, setInventory] = useState<Inventory[]>([]);
@@ -25,11 +26,21 @@ export function useInventory() {
   }) => {
     const { name, value, type } = e.target;
     let newValue: unknown = value;
-    if (type === "date") {
+
+    if (type === "text") {
+      const sanitizeValue = sanitize(value);
+      if (sanitizeValue !== null) {
+        newValue = sanitizeValue;
+      } else {
+        console.error("Invalid input.");
+        return;
+      }
+    } else if (type === "date") {
       newValue = Timestamp.fromDate(new Date(value));
     } else if (name === "amount") {
       newValue = Number(value);
     }
+
     setNewInventory((prevState) => ({
       ...prevState,
       [name]: newValue,
