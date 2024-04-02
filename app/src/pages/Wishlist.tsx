@@ -8,7 +8,7 @@ import deleteIcon from '/delete.svg';
 import sortIcon from '/sort.svg';
 
 export default function Wishlist() {
-    const { wishlistItems, handleDelete, formatDateInput } = useWishlist();
+    const { wishlistItems, handleDelete } = useWishlist();
     const [sortTypeFirst, setSortTypeFirst] = useState(true);
 
     const toggleSort = () => {
@@ -70,7 +70,7 @@ export default function Wishlist() {
                                     {item.cost}
                                 </td>
                                 <td className="px-6 py-5">
-                                    {item.date && formatDateInput(item.date)}
+                                    {item.date ? new Date(item.date.seconds * 1000).toLocaleDateString() : ""}
                                 </td>
                                 <td className="px-6 py-5">
                                     <span className="py-2 px-4 bg-blue-100 rounded-xl">
