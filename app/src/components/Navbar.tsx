@@ -7,7 +7,7 @@ import home from '/home.svg';
 import bill from '/bill.svg';
 import maintenance from '/maintenance.svg';
 import inventory from '/inventory.svg';
-import visitors from '/visitors.svg';
+// import visitors from '/visitors.svg';
 import menu from '/menu.svg';
 import security from '/security.svg';
 import contact from '/contact.svg';
@@ -115,12 +115,12 @@ export default function Navbar() {
                                 <span className="flex-1 ms-3 whitespace-nowrap">Inventory</span>
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to="/visitors" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/visitors")}`}>
                                 <img src={visitors} alt="bill" className="w-6 h-6" />
                                 <span className="flex-1 ms-3 whitespace-nowrap">Visitors</span>
                             </Link>
-                        </li>
+                        </li> */}
                         <li>
                             <Link to="/contacts" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/contacts")}`}>
                                 <img src={contact} alt="bill" className="w-6 h-6" />
