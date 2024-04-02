@@ -188,13 +188,10 @@ export function usePayment() {
     const differenceInDays = Math.ceil(differenceInTime / (1000 * 3600 * 24));
 
     if (differenceInDays > 0) {
-      // If the due date is in the future
       return `in ${differenceInDays} days`;
     } else if (differenceInDays < 0) {
-      // If the due date has passed
       return `${Math.abs(differenceInDays)} days ago`;
     } else {
-      // If today is the due date
       return "Today";
     }
   };

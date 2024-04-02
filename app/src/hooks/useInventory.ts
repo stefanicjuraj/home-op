@@ -164,7 +164,7 @@ export function useInventory() {
     } else if (differenceInDays < 0) {
       return `${Math.abs(differenceInDays)} days ago`;
     } else {
-      return "today";
+      return "Today";
     }
   };
 
