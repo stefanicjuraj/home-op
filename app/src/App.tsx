@@ -5,7 +5,6 @@ import { User, onAuthStateChanged } from "firebase/auth";
 // Service
 import { auth } from "./services/firebase"
 // Components
-import LogOut from "./components/Logout";
 import Navbar from "./components/Navbar";
 // Pages
 import Home from "./pages/Home";
@@ -39,7 +38,6 @@ export default function App() {
         {currentUser ? (
           <>
             <Navbar />
-            <LogOut />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/payments" element={<BillsPayments />} />
