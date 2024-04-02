@@ -1,12 +1,12 @@
 // Hooks
-import { usePayment } from '../hooks/usePayment';
+import { useBillsPayments } from '../hooks/useBillsPayments';
 // Components
 import AddBillsPayments from '../components/AddBillsPayments';
 // Icons
 import icon from '/delete.svg';
 
 export default function BillsPayments() {
-    const { payments, handleDelete, calculateRemainingDays, togglePaymentStatus } = usePayment();
+    const { payments, handleDelete, calculateRemainingDays, togglePaymentStatus } = useBillsPayments();
 
     const sortPayments = payments.sort((a, b) => {
         if (a.isPaid !== b.isPaid) {
