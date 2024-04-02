@@ -6,7 +6,7 @@ import AddSecurity from '../components/AddSecurity';
 import DeleteIcon from '/delete.svg';
 
 export default function Security() {
-    const { security, handleDelete } = useSecurity();
+    const { security, handleDelete, toggleSecurityStatus } = useSecurity();
 
     return (
         <>
@@ -47,7 +47,11 @@ export default function Security() {
                                     {protocol.description}
                                 </td>
                                 <td className="px-6 py-5">
-                                    {protocol.isEnabled ? "Enabled" : "Disabled"}
+                                    <button
+                                        className={`px-4 py-2 rounded-xl ${protocol.isEnabled ? 'bg-green-200' : 'bg-red-200'}`}
+                                        onClick={() => toggleSecurityStatus(protocol.id, !protocol.isEnabled)}>
+                                        {protocol.isEnabled ? "Enabled" : "Disabled"}
+                                    </button>
                                 </td>
                                 <td className="px-6 py-5">
                                     <button onClick={() => handleDelete(protocol.id)}>
