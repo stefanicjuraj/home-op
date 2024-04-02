@@ -12,6 +12,7 @@ import { sanitize } from "../utils/sanitize";
 export function useBillsPayments() {
   const [payments, setPayments] = useState<Payment[]>([]);
   const [user] = useAuthState(auth);
+  const [showDeleteAlert, setShowDeleteAlert] = useState(false);
 
   const [newPayment, setNewPayment] = useState({
     id: Date.now(),
@@ -133,6 +134,9 @@ export function useBillsPayments() {
     } catch (error) {
       console.error("Error deleting bill:", error);
     }
+
+    setShowDeleteAlert(true);
+    setTimeout(() => setShowDeleteAlert(false), 1000);
   };
 
   const handleUpdate = async (paymentId: number, isPaid: unknown) => {
@@ -217,5 +221,6 @@ export function useBillsPayments() {
     handleDelete,
     calculateRemainingDays,
     togglePaymentStatus,
+    showDeleteAlert,
   };
 }
