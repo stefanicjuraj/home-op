@@ -1,7 +1,7 @@
 // Hooks
 import { useSecurity } from '../hooks/useSecurity';
 // Components
-import SecurityForm from '../components/AddSecurity';
+import AddSecurity from '../components/AddSecurity';
 // Icons
 import DeleteIcon from '/delete.svg';
 
@@ -19,7 +19,7 @@ export default function Security() {
                 </p>
             </div>
 
-            <SecurityForm />
+            <AddSecurity />
 
             <div className="mx-auto max-w-7xl relative overflow-x-auto px-4 mb-32">
                 <table className="max-w-7xl mx-auto w-full text-left rtl:text-right">

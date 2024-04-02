@@ -1,7 +1,7 @@
 // Hooks
 import { useMaintenance } from '../hooks/useMaintenance';
 // Components
-import MaintenanceForm from '../components/AddMaintenance';
+import AddMaintenance from '../components/AddMaintenance';
 // Icons
 import icon from '/delete.svg';
 
@@ -19,7 +19,7 @@ export default function Maintenance() {
                 </p>
             </div>
 
-            <MaintenanceForm />
+            <AddMaintenance />
 
             <div className="mx-auto max-w-7xl relative overflow-x-auto px-4 mb-32">
                 <table className="max-w-7xl mx-auto w-full text-left rtl:text-right">

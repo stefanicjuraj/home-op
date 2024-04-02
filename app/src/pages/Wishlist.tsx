@@ -1,7 +1,7 @@
 // Hooks
 import { useWishlist } from '../hooks/useWishlist';
 // Components
-import WishlistForm from '../components/AddWishlist';
+import AddWishlist from '../components/AddWishlist';
 // Icons
 import deleteIcon from '/delete.svg';
 
@@ -17,7 +17,7 @@ export default function Wishlist() {
                 </p>
             </div>
 
-            <WishlistForm />
+            <AddWishlist />
 
             <div className="mx-auto max-w-7xl relative overflow-x-auto px-4 mb-32">
                 <table className="max-w-7xl mx-auto w-full text-left rtl:text-right">

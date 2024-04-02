@@ -1,7 +1,7 @@
 // Hooks
 import { useContact } from '../hooks/useContact';
 // Componenets
-import ContactForm from '../components/AddContact';
+import AddContact from '../components/AddContact';
 // Icons
 import DeleteIcon from '/delete.svg';
 
@@ -19,7 +19,7 @@ export default function Contact() {
                 </p>
             </div>
 
-            <ContactForm />
+            <AddContact />
 
             <div className="mx-auto max-w-7xl relative overflow-x-auto px-4">
                 <table className="max-w-7xl mx-auto w-full text-left rtl:text-right">
