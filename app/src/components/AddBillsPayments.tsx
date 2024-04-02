@@ -1,10 +1,10 @@
 // Hooks
-import { usePayment } from "../hooks/usePayment";
+import { useBillsPayments } from "../hooks/useBillsPayments";
 // Icons
 import cost from '/cost.svg';
 
 export default function AddBillsPayments() {
-    const { newPayment, setNewPayment, handleInputChange, handleSubmit, formatDateInput } = usePayment();
+    const { newPayment, setNewPayment, handleInputChange, handleSubmit, formatDateInput } = useBillsPayments();
 
     return (
         <div className="mx-auto mb-8 max-w-7xl px-4">
