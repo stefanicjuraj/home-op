@@ -9,7 +9,7 @@ import { Payment } from "../types/payment";
 import { formatDateInput } from "../utils/formatDate";
 import { sanitize } from "../utils/sanitize";
 
-export function usePayment() {
+export function useBillsPayments() {
   const [payments, setPayments] = useState<Payment[]>([]);
   const [user] = useAuthState(auth);
 
