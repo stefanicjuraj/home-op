@@ -5,8 +5,8 @@ export default function Login() {
     const navigate = useNavigate();
 
     return (
-        <div className="mx-auto text-center mb-24">
-            <button type="button" className="text-white bg-blue-500 focus:ring-2 focus:outline-none focus:ring-blue-300 rounded-xl text-sm mx-auto px-7 py-3"
+        <div className="mx-auto text-center my-32">
+            <button type="button" className="text-white bg-blue-500 focus:ring-2 focus:outline-none focus:ring-blue-300 rounded-xl text-md mx-auto px-7 py-4"
                 onClick={() => signInWithGoogle()
                     .then(user => {
                         console.log('Logged in user:', user);
