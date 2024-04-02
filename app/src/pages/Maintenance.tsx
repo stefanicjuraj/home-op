@@ -2,11 +2,12 @@
 import { useMaintenance } from '../hooks/useMaintenance';
 // Components
 import AddMaintenance from '../components/AddMaintenance';
+import DeleteAlert from '../components/Alerts/DeleteAlert';
 // Icons
 import icon from '/delete.svg';
 
 export default function Maintenance() {
-    const { maintenance, handleDelete, formatDateForInput, toggleCompletionStatus } = useMaintenance();
+    const { maintenance, handleDelete, formatDateForInput, toggleCompletionStatus, showDeleteAlert } = useMaintenance();
 
     return (
         <>
@@ -69,6 +70,9 @@ export default function Maintenance() {
                     </tbody>
                 </table>
             </div>
+
+            {showDeleteAlert && <DeleteAlert />}
+
         </>
     );
 }

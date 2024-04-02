@@ -2,11 +2,12 @@
 import { useContact } from '../hooks/useContact';
 // Componenets
 import AddContact from '../components/AddContact';
+import DeleteAlert from '../components/Alerts/DeleteAlert';
 // Icons
 import DeleteIcon from '/delete.svg';
 
 export default function Contact() {
-    const { contacts, handleDelete } = useContact();
+    const { contacts, handleDelete, showDeleteAlert } = useContact();
 
     return (
         <>
@@ -59,6 +60,9 @@ export default function Contact() {
                     </tbody>
                 </table>
             </div>
+
+            {showDeleteAlert && <DeleteAlert />}
+
         </>
     );
 }

@@ -2,11 +2,12 @@
 import { useSecurity } from '../hooks/useSecurity';
 // Components
 import AddSecurity from '../components/AddSecurity';
+import DeleteAlert from '../components/Alerts/DeleteAlert';
 // Icons
 import DeleteIcon from '/delete.svg';
 
 export default function Security() {
-    const { security, handleDelete, toggleSecurityStatus } = useSecurity();
+    const { security, handleDelete, toggleSecurityStatus, showDeleteAlert } = useSecurity();
 
     return (
         <>
@@ -63,6 +64,9 @@ export default function Security() {
                     </tbody>
                 </table>
             </div>
+
+            {showDeleteAlert && <DeleteAlert />}
+
         </>
     );
 }

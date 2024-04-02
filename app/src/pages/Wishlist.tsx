@@ -2,11 +2,12 @@
 import { useWishlist } from '../hooks/useWishlist';
 // Components
 import AddWishlist from '../components/AddWishlist';
+import DeleteAlert from '../components/Alerts/DeleteAlert';
 // Icons
 import deleteIcon from '/delete.svg';
 
 export default function Wishlist() {
-    const { wishlistItems, handleDelete } = useWishlist();
+    const { wishlistItems, handleDelete, showDeleteAlert } = useWishlist();
 
     return (
         <>
@@ -71,6 +72,9 @@ export default function Wishlist() {
                     </tbody>
                 </table>
             </div>
+
+            {showDeleteAlert && <DeleteAlert />}
+
         </>
     );
 }

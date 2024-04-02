@@ -2,11 +2,12 @@
 import { useInventory } from '../hooks/useInventory';
 // Components
 import AddInventory from '../components/AddInventory';
+import DeleteAlert from '../components/Alerts/DeleteAlert';
 // Icons
 import icon from '/delete.svg';
 
 export default function Inventory() {
-    const { inventory, handleDelete, calculateRemainingDays } = useInventory();
+    const { inventory, handleDelete, calculateRemainingDays, showDeleteAlert } = useInventory();
 
     return (
         <>
@@ -71,6 +72,9 @@ export default function Inventory() {
                     </tbody>
                 </table>
             </div >
+
+            {showDeleteAlert && <DeleteAlert />}
+
         </>
     )
 }
