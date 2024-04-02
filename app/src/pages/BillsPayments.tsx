@@ -2,11 +2,12 @@
 import { useBillsPayments } from '../hooks/useBillsPayments';
 // Components
 import AddBillsPayments from '../components/AddBillsPayments';
+import DeleteAlert from '../components/Alerts/DeleteAlert';
 // Icons
 import icon from '/delete.svg';
 
 export default function BillsPayments() {
-    const { payments, handleDelete, calculateRemainingDays, togglePaymentStatus } = useBillsPayments();
+    const { payments, handleDelete, calculateRemainingDays, togglePaymentStatus, showDeleteAlert } = useBillsPayments();
 
     const sortPayments = payments.sort((a, b) => {
         if (a.isPaid !== b.isPaid) {
@@ -113,6 +114,9 @@ export default function BillsPayments() {
                     </tbody>
                 </table>
             </div>
+
+            {showDeleteAlert && <DeleteAlert />}
+
         </>
     );
 }
