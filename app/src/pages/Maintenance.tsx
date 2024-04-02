@@ -6,7 +6,7 @@ import AddMaintenance from '../components/AddMaintenance';
 import icon from '/delete.svg';
 
 export default function Maintenance() {
-    const { maintenance, handleDelete, formatDateForInput } = useMaintenance();
+    const { maintenance, handleDelete, formatDateForInput, toggleCompletionStatus } = useMaintenance();
 
     return (
         <>
@@ -52,8 +52,12 @@ export default function Maintenance() {
                                 <td className="px-6 py-4">
                                     {task.dueDate ? formatDateForInput(task.dueDate) : ""}
                                 </td>
-                                <td className="px-6 py-4">
-                                    {task.isCompleted ? "Yes" : "No"}
+                                <td className="px-6 py-5">
+                                    <button
+                                        className={`px-4 py-2 rounded-xl ${task.isCompleted ? 'bg-green-200' : 'bg-red-200'}`}
+                                        onClick={() => toggleCompletionStatus(task.id, !task.isCompleted)}>
+                                        {task.isCompleted ? "Complete" : "Incomplete"}
+                                    </button>
                                 </td>
                                 <td className="px-6 py-4">
                                     <button onClick={() => handleDelete(task.id)}>
