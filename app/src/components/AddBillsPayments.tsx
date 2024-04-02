@@ -19,6 +19,7 @@ export default function AddBillsPayments() {
                         maxLength={20}
                         value={newPayment.payment}
                         onChange={handleInputChange}
+                        autoComplete="off"
                         required
                     />
                 </div>

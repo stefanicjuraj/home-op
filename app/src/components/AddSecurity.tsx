@@ -25,6 +25,7 @@ export default function AddSecurity() {
                         value={newSecurityProtocol.name}
                         onChange={handleInputChange}
                         maxLength={30}
+                        autoComplete="off"
                         required
                     />
                 </div>
@@ -41,6 +42,7 @@ export default function AddSecurity() {
                             value={newSecurityProtocol.description}
                             onChange={handleInputChange}
                             maxLength={30}
+                            autoComplete="off"
                             required
                         />
                     </div>

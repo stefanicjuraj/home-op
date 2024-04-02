@@ -18,6 +18,7 @@ export default function AddInventory() {
                         value={newInventory.name}
                         onChange={handleInputChange}
                         maxLength={20}
+                        autoComplete="off"
                         required
                     />
                 </div>

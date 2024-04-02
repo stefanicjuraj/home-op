@@ -23,6 +23,7 @@ export default function AddContact() {
                             value={newContacts.name}
                             onChange={handleInputChange}
                             maxLength={20}
+                            autoComplete="off"
                             required
                         />
                     </div>
@@ -56,6 +57,7 @@ export default function AddContact() {
                             value={newContacts.address}
                             onChange={handleInputChange}
                             maxLength={40}
+                            autoComplete="off"
                             required
                         />
                     </div>

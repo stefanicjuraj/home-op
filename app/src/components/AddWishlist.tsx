@@ -19,6 +19,7 @@ export default function AddWishlist() {
                         maxLength={20}
                         value={newWishlistItem.item}
                         onChange={handleInputChange}
+                        autoComplete="off"
                         required
                     />
                 </div>

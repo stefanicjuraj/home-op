@@ -15,6 +15,7 @@ export default function AddVisitor() {
                         maxLength={20}
                         value={newVisitor.name}
                         onChange={handleInputChange}
+                        autoComplete="off"
                         required
                     />
                 </div>

@@ -23,6 +23,7 @@ export default function AddMaintenance() {
                         value={newMaintenanceTask.description}
                         onChange={handleInputChange}
                         maxLength={30}
+                        autoComplete="off"
                         required
                     />
                 </div>
@@ -40,6 +41,7 @@ export default function AddMaintenance() {
                             value={newMaintenanceTask.assignedTo}
                             onChange={handleInputChange}
                             maxLength={30}
+                            autoComplete="off"
                             required
                         />
                     </div>
