@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 // Components
 import LogOut from './Logout';
@@ -22,35 +22,6 @@ export default function Navbar() {
     const toggleSidebar = () => {
         setSidebarOpen((prevState) => !prevState);
     };
-
-    // close sidebar
-    const closeSidebar = () => {
-        setSidebarOpen(false);
-    };
-
-    // close sidebar on click outside
-    useEffect(() => {
-        // this closes the sidebar when clicked on a link
-        const links = document.querySelectorAll("#logo-sidebar a");
-        links.forEach((link) => {
-            link.addEventListener("click", closeSidebar);
-        });
-
-        // this closes the sidebar when clicked outside of it
-        const handleClickOutside = (event: React.MouseEvent) => {
-            if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-                setSidebarOpen(false);
-            }
-        };
-
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            links.forEach((link) => {
-                link.removeEventListener("click", closeSidebar);
-            });
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
 
     // active path
     useEffect(() => {
