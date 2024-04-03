@@ -2,6 +2,7 @@
 import { useBillsPayments } from "../hooks/useBillsPayments";
 // Icons
 import cost from '/cost.svg';
+import bill from '/bill-dark.svg';
 
 export default function AddBillsPayments() {
     const { newPayment, setNewPayment, handleInputChange, handleSubmit, formatDateInput } = useBillsPayments();
@@ -10,18 +11,23 @@ export default function AddBillsPayments() {
         <div className="mx-auto mb-8 max-w-7xl px-4">
             <form onSubmit={handleSubmit} className="flex flex-wrap items-center justify-between">
                 <div className="flex-1 min-w-[35%] sm:min-w-[10%] mr-2 my-2">
-                    <label htmlFor="payment" className="block mb-1 text-gray-500 text-sm">Name</label>
-                    <input className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
-                        type="text"
-                        id="payment"
-                        name="payment"
-                        placeholder="Phone bill"
-                        maxLength={20}
-                        value={newPayment.payment}
-                        onChange={handleInputChange}
-                        autoComplete="off"
-                        required
-                    />
+                    <label htmlFor="payment" className="block mb-1 text-gray-500 text-sm">Cost</label>
+                    <div className="relative w-full">
+                        <div className="absolute inset-y-0 start-0 top-0 flex items-center ps-3 pointer-events-none">
+                            <img src={bill} className="h-6 w-6" />
+                        </div>
+                        <input className="block p-3.5 w-full z-20 ps-10 text-sm text-gray-900 rounded-md border border-gray-500 focus:border-blue-500 focus:ring-offset-gray-100"
+                            type="text"
+                            id="payment"
+                            name="payment"
+                            placeholder="Phone bill"
+                            maxLength={20}
+                            value={newPayment.payment}
+                            onChange={handleInputChange}
+                            autoComplete="off"
+                            required
+                        />
+                    </div>
                 </div>
                 <div className="flex-1 min-w-[20%] sm:min-w-[10%] mr-2 my-2 relative">
                     <label htmlFor="amount" className="block mb-1 text-gray-500 text-sm">Cost</label>

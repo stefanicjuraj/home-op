@@ -1,6 +1,7 @@
 import { useInventory } from '../hooks/useInventory';
 // Icons
 import amount from '/amount.svg';
+import inventory from '/inventory-dark.svg';
 
 export default function AddInventory() {
     const { newInventory, setNewInventory, handleInputChange, handleSubmit, formatDateInput } = useInventory();
@@ -10,17 +11,22 @@ export default function AddInventory() {
             <form onSubmit={handleSubmit} className="flex flex-wrap items-center justify-between">
                 <div className="flex-1 min-w-[35%] sm:min-w-[20%] mr-2 my-2">
                     <label htmlFor="name" className="block mb-1 text-gray-500 text-sm">Inventory item</label>
-                    <input className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Item name"
-                        value={newInventory.name}
-                        onChange={handleInputChange}
-                        maxLength={20}
-                        autoComplete="off"
-                        required
-                    />
+                    <div className="relative w-full">
+                        <div className="absolute inset-y-0 start-0 top-0 flex items-center ps-3 pointer-events-none">
+                            <img src={inventory} className="h-6 w-6" />
+                        </div>
+                        <input className="block p-3.5 w-full z-20 ps-10 text-sm text-gray-900 rounded-md border border-gray-500 focus:border-blue-500 focus:ring-offset-gray-100"
+                            type="text"
+                            name="name"
+                            id="name"
+                            placeholder="Item name"
+                            value={newInventory.name}
+                            onChange={handleInputChange}
+                            maxLength={20}
+                            autoComplete="off"
+                            required
+                        />
+                    </div>
                 </div>
                 <div className="flex-1 min-w-[25%] sm:min-w-[10%] mr-2">
                     <label htmlFor="amount" className="block mb-1 text-gray-500 text-sm">Amount</label>
