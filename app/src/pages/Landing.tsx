@@ -4,7 +4,6 @@ import Login from '../components/Login';
 import bill from '/bill-white.svg';
 import maintenance from '/maintenance-white.svg';
 import inventory from '/inventory-white.svg';
-import visitors from '/visitors-white.svg';
 import security from '/security-white.svg';
 import contact from '/contact-white.svg';
 
@@ -38,15 +37,6 @@ export default function Landing() {
                             <h2 className="mb-2 text-2xl font-bold">Inventory</h2>
                             <p className="text-gray-500">
                                 Stay updated with the latest inventory and stock levels of your home essentials.
-                            </p>
-                        </div>
-                        <div>
-                            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-500 lg:h-16 lg:w-16">
-                                <img src={visitors} alt="dropdown" className="w-8 h-8" />
-                            </div>
-                            <h2 className="mb-2 text-2xl font-bold">Visitors</h2>
-                            <p className="text-gray-500">
-                                Keep track of your visitors and guests, and manage their stay at your home.
                             </p>
                         </div>
                         <div>

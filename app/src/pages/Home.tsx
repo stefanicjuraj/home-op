@@ -7,7 +7,6 @@ import { auth, db } from '../services/firebase';
 import bill from '/bill-white.svg';
 import maintenance from '/maintenance-white.svg';
 import inventory from '/inventory-white.svg';
-import visitors from '/visitors-white.svg';
 import security from '/security-white.svg';
 import contact from '/contact-white.svg';
 import wishlist from '/wishlist-white.svg';
@@ -77,22 +76,6 @@ export default function Home() {
                         </h1>
                         <h1 className="mb-2">
                             Stay updated with the latest inventory and stock levels of your home essentials.
-                        </h1>
-                        <div className="flex flex-row-reverse">
-                        </div>
-                    </div>
-                </Link>
-                {/* Visitors */}
-                <Link to="/visitors">
-                    <div className="mb-8 px-8 py-4 rounded-xl bg-blue-50 shadow-sm hover:shadow-inner hover:shadow-gray-300 animation glow delay-4">
-                        <div className="flex justify-center items-center mt-4 mb-4 w-10 h-10 rounded-full bg-blue-400 lg:h-12 lg:w-12">
-                            <img src={visitors} alt="dropdown" className="w-7 h-7" />
-                        </div>
-                        <h1 className="mb-4 text-xl font-bold">
-                            Visitors
-                        </h1>
-                        <h1 className="mb-2">
-                            Keep track of your visitors and guests, and manage their stay at your home.
                         </h1>
                         <div className="flex flex-row-reverse">
                         </div>
