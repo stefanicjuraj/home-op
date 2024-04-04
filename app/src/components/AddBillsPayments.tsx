@@ -109,7 +109,6 @@ export default function AddBillsPayments() {
                     Add
                 </button>
             </form>
-
         </div>
     );
 
