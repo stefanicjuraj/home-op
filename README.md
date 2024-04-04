@@ -46,8 +46,10 @@ As I am sharing a similar process to many students finishing their studies, the 
 ![react][react]
 ![typescript][typescript]
 ![firebase][firebase]
+![tailwind][tailwind]
 
 [node.js]: https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=node.js&logoColor=white
 [react]: https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black
 [typescript]: https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white
 [firebase]: https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black
+[tailwind]: https://img.shields.io/badge/tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
