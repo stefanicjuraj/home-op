@@ -24,6 +24,22 @@ As I am sharing a similar process to many students finishing their studies, the 
 - [x] **Maintenance**: Track the condition of their property, schedule regular maintenance activities, and arrange for repairs.
 - [x] **Wishlist**: Keep track of items you want to buy and plan your purchases.
 
+<br />
+
+<img src="/app/public/bills-payments.png" width="90%">
+
+<img src="/app/public/inventory.png" width="90%">
+
+<img src="/app/public/contacts.png" width="90%">
+
+<img src="/app/public/security.png" width="90%">
+
+<img src="/app/public/maintenance.png" width="90%">
+
+<img src="/app/public/wishlist.png" width="90%">
+
+<br />
+
 ## Getting Started
 
 ### Requirements
