@@ -105,15 +105,15 @@ export default function Navbar() {
                             </Link>
                         </li>
                         <li>
-                            <Link to="/wishlist" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/wishlist")}`}>
-                                <img src={wishlist} alt="bill" className="w-6 h-6" />
-                                <span className="flex-1 ms-3 whitespace-nowrap">Wishlist</span>
-                            </Link>
-                        </li>
-                        <li>
                             <Link to="/maintenance" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/maintenance")}`}>
                                 <img src={maintenance} alt="bill" className="w-6 h-6" />
                                 <span className="flex-1 ms-3 whitespace-nowrap">Maintenance</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/wishlist" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/wishlist")}`}>
+                                <img src={wishlist} alt="bill" className="w-6 h-6" />
+                                <span className="flex-1 ms-3 whitespace-nowrap">Wishlist</span>
                             </Link>
                         </li>
                     </ul>
