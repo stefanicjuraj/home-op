@@ -5,7 +5,7 @@ Home Operations (Home Op) is a web application designed to create, manage, plan 
 <br />
 
 <div align="center">
-    <img src="/app/public/homeop-homepage.png" width="100%">
+    <img src="/app/public/homeop-homepage.png" width="90%">
 </div>
 
 <br />
