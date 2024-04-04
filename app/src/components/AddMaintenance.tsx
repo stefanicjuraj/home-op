@@ -15,7 +15,9 @@ export default function AddMaintenance() {
         <div className="mx-auto mb-8 max-w-7xl px-4">
             <form onSubmit={handleSubmit} className="flex flex-wrap items-center justify-between">
                 <div className="flex-1 min-w-[35%] md:min-w-[25%] mr-2 my-2">
-                    <label htmlFor="description" className="block mb-1 text-gray-500 text-sm">Maintenance task</label>
+                    <label htmlFor="description" className="block mb-1 text-gray-500 text-sm">
+                        Maintenance task
+                    </label>
                     <div className="relative w-full">
                         <div className="absolute inset-y-0 start-0 top-0 flex items-center ps-3 pointer-events-none">
                             <img src={maintenance} className="h-6 w-6" />
@@ -34,7 +36,9 @@ export default function AddMaintenance() {
                     </div>
                 </div>
                 <div className="flex-1 min-w-[25%] md:min-w-[25%] mr-2 my-2">
-                    <label htmlFor="assignedTo" className="block mb-1 text-gray-500 text-sm">Assigned to</label>
+                    <label htmlFor="assignedTo" className="block mb-1 text-gray-500 text-sm">
+                        Assigned to
+                    </label>
                     <div className="relative w-full">
                         <div className="absolute inset-y-0 start-0 top-0 flex items-center ps-3 pointer-events-none">
                             <img src={user} className="h-6 w-6" />
@@ -53,7 +57,9 @@ export default function AddMaintenance() {
                     </div>
                 </div>
                 <div className="flex-1 min-w-[25%] md:min-w-[10%] mr-2 my-2">
-                    <label htmlFor="dueDate" className="block mb-1 text-gray-500 text-sm">Due date</label>
+                    <label htmlFor="dueDate" className="block mb-1 text-gray-500 text-sm">
+                        Due date
+                    </label>
                     <input className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
                         type="date"
                         name="dueDate"
@@ -63,7 +69,9 @@ export default function AddMaintenance() {
                     />
                 </div>
                 <div className="flex-1 min-w-[25%] md:min-w-[5%] mr-2 my-2">
-                    <label htmlFor="isCompleted" className="block mb-1 text-gray-500 text-sm">Status</label>
+                    <label htmlFor="isCompleted" className="block mb-1 text-gray-500 text-sm">
+                        Status
+                    </label>
                     <select className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
                         name="isCompleted"
                         id="isCompleted"

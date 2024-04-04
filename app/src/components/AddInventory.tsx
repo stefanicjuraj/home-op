@@ -10,7 +10,9 @@ export default function AddInventory() {
         <div className="mx-auto mb-8 max-w-7xl px-4">
             <form onSubmit={handleSubmit} className="flex flex-wrap items-center justify-between">
                 <div className="flex-1 min-w-[35%] sm:min-w-[20%] mr-2 my-2">
-                    <label htmlFor="name" className="block mb-1 text-gray-500 text-sm">Inventory item</label>
+                    <label htmlFor="name" className="block mb-1 text-gray-500 text-sm">
+                        Inventory item
+                    </label>
                     <div className="relative w-full">
                         <div className="absolute inset-y-0 start-0 top-0 flex items-center ps-3 pointer-events-none">
                             <img src={inventory} className="h-6 w-6" />
@@ -29,7 +31,9 @@ export default function AddInventory() {
                     </div>
                 </div>
                 <div className="flex-1 min-w-[25%] sm:min-w-[10%] mr-2">
-                    <label htmlFor="amount" className="block mb-1 text-gray-500 text-sm">Amount</label>
+                    <label htmlFor="amount" className="block mb-1 text-gray-500 text-sm">
+                        Amount
+                    </label>
                     <div className="relative w-full">
                         <div className="absolute inset-y-0 start-0 top-0 flex items-center ps-3 pointer-events-none">
                             <img src={amount} className="h-6 w-6" />
@@ -45,7 +49,9 @@ export default function AddInventory() {
                     </div>
                 </div>
                 <div className="flex-1 min-w-[30%] sm:min-w-[10%] mr-2 my-2">
-                    <label htmlFor="date" className="block mb-1 text-gray-500 text-sm">Expiry date</label>
+                    <label htmlFor="date" className="block mb-1 text-gray-500 text-sm">
+                        Expiry date
+                    </label>
                     <input className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
                         type="date"
                         name="date"
@@ -56,7 +62,9 @@ export default function AddInventory() {
                     />
                 </div>
                 <div className="flex-1 min-w-[30%] sm:min-w-[10%] mr-2">
-                    <label htmlFor="type" className="block mb-1 text-gray-500 text-sm">Status</label>
+                    <label htmlFor="type" className="block mb-1 text-gray-500 text-sm">
+                        Status
+                    </label>
                     <select className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
                         name="type"
                         id="type"

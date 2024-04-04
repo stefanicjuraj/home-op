@@ -1,4 +1,3 @@
-
 import { logoutUser } from "../hooks/useAuth";
 
 function LogOut() {

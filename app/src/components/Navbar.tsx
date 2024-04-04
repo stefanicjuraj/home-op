@@ -7,7 +7,6 @@ import home from '/home.svg';
 import bill from '/bill.svg';
 import maintenance from '/maintenance.svg';
 import inventory from '/inventory.svg';
-// import visitors from '/visitors.svg';
 import menu from '/menu.svg';
 import security from '/security.svg';
 import contact from '/contact.svg';
@@ -18,17 +17,17 @@ export default function Navbar() {
     const [activePath, setActivePath] = useState("/");
     const location = useLocation();
     const sidebarRef = useRef(null);
-    // toggle sidebar
+
     const toggleSidebar = () => {
         setSidebarOpen((prevState) => !prevState);
     };
 
-    // active path
+
     useEffect(() => {
         setActivePath(location.pathname);
     }, [location.pathname]);
 
-    // active class
+
     const activeClass = (path: string) => {
         return activePath === path ? 'bg-blue-50' : "";
     };
@@ -71,49 +70,57 @@ export default function Navbar() {
                         <li>
                             <Link to="/" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/")}`}>
                                 <img src={home} alt="bill" className="w-6 h-6" />
-                                <span className="ms-3">My Home</span>
+                                <span className="ms-3">
+                                    My Home
+                                </span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/payments" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/payments")}`}>
                                 <img src={bill} alt="bill" className="w-6 h-6" />
-                                <span className="flex-1 ms-2 whitespace-nowrap">Bills & Payments</span>
+                                <span className="flex-1 ms-2 whitespace-nowrap">
+                                    Bills & Payments
+                                </span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/inventory" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/inventory")}`}>
                                 <img src={inventory} alt="bill" className="w-6 h-6" />
-                                <span className="flex-1 ms-3 whitespace-nowrap">Inventory</span>
+                                <span className="flex-1 ms-3 whitespace-nowrap">
+                                    Inventory
+                                </span>
                             </Link>
                         </li>
-                        {/* <li>
-                            <Link to="/visitors" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/visitors")}`}>
-                                <img src={visitors} alt="bill" className="w-6 h-6" />
-                                <span className="flex-1 ms-3 whitespace-nowrap">Visitors</span>
-                            </Link>
-                        </li> */}
                         <li>
                             <Link to="/contacts" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/contacts")}`}>
                                 <img src={contact} alt="bill" className="w-6 h-6" />
-                                <span className="flex-1 ms-3 whitespace-nowrap">Contacts</span>
+                                <span className="flex-1 ms-3 whitespace-nowrap">
+                                    Contacts
+                                </span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/security" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/security")}`}>
                                 <img src={security} alt="bill" className="w-6 h-6" />
-                                <span className="flex-1 ms-3 whitespace-nowrap">Security</span>
+                                <span className="flex-1 ms-3 whitespace-nowrap">
+                                    Security
+                                </span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/maintenance" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/maintenance")}`}>
                                 <img src={maintenance} alt="bill" className="w-6 h-6" />
-                                <span className="flex-1 ms-3 whitespace-nowrap">Maintenance</span>
+                                <span className="flex-1 ms-3 whitespace-nowrap">
+                                    Maintenance
+                                </span>
                             </Link>
                         </li>
                         <li>
                             <Link to="/wishlist" className={`flex items-center p-2 text-black rounded-xl group hover:bg-blue-50 ${activeClass("/wishlist")}`}>
                                 <img src={wishlist} alt="bill" className="w-6 h-6" />
-                                <span className="flex-1 ms-3 whitespace-nowrap">Wishlist</span>
+                                <span className="flex-1 ms-3 whitespace-nowrap">
+                                    Wishlist
+                                </span>
                             </Link>
                         </li>
                     </ul>

@@ -18,7 +18,9 @@ export default function AddSecurity() {
         <div className="mx-auto mb-8 max-w-7xl px-4">
             <form onSubmit={handleSubmit} className="flex flex-wrap items-center justify-between">
                 <div className="flex-1 min-w-[50%] md:min-w-[35%] mr-2 my-2">
-                    <label htmlFor="name" className="block mb-1 text-gray-500 text-sm">Security protocol</label>
+                    <label htmlFor="name" className="block mb-1 text-gray-500 text-sm">
+                        Security protocol
+                    </label>
                     <div className="relative w-full">
                         <div className="absolute inset-y-0 start-0 top-0 flex items-center ps-3 pointer-events-none">
                             <img src={security} className="h-6 w-6" />
@@ -36,7 +38,9 @@ export default function AddSecurity() {
                     </div>
                 </div>
                 <div className="flex-1 min-w-[25%] md:min-w-[35%] mr-2 my-2">
-                    <label htmlFor="description" className="block mb-1 text-gray-500 text-sm">Description</label>
+                    <label htmlFor="description" className="block mb-1 text-gray-500 text-sm">
+                        Description
+                    </label>
                     <div className="relative w-full">
                         <div className="absolute inset-y-0 start-0 top-0 flex items-center ps-3 pointer-events-none">
                             <img src={description} className="h-6 w-6" />
@@ -54,7 +58,9 @@ export default function AddSecurity() {
                     </div>
                 </div>
                 <div className="flex-1 min-w-[25%] md:min-w-[10%] mr-2">
-                    <label htmlFor="isEnabled" className="block mb-1 text-gray-500 text-sm">Status</label>
+                    <label htmlFor="isEnabled" className="block mb-1 text-gray-500 text-sm">
+                        Status
+                    </label>
                     <select className="w-full rounded-md border border-gray-500 focus:border-blue-500 p-3"
                         name="isEnabled"
                         value={newSecurityProtocol.isEnabled.toString()}
