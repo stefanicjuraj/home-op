@@ -22,7 +22,7 @@ export default function Landing() {
                     <Login />
                     <div className="text-[#000] space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-16 md:space-y-0">
                         <div>
-                            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-500 lg:h-16 lg:w-16">
+                            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-400 lg:h-16 lg:w-16">
                                 <img src={bill} alt="dropdown" className="w-8 h-8" />
                             </div>
                             <h2 className="mb-4 text-2xl font-bold">Bills & Payments</h2>
@@ -31,7 +31,7 @@ export default function Landing() {
                             </p>
                         </div>
                         <div>
-                            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-500 lg:h-16 lg:w-16">
+                            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-400 lg:h-16 lg:w-16">
                                 <img src={inventory} alt="dropdown" className="w-8 h-8" />
                             </div>
                             <h2 className="mb-2 text-2xl font-bold">Inventory</h2>
@@ -40,7 +40,7 @@ export default function Landing() {
                             </p>
                         </div>
                         <div>
-                            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-500 lg:h-16 lg:w-16">
+                            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-400 lg:h-16 lg:w-16">
                                 <img src={contact} alt="dropdown" className="w-8 h-8" />
                             </div>
                             <h2 className="mb-2 text-2xl font-bold">Contacts</h2>
@@ -49,7 +49,7 @@ export default function Landing() {
                             </p>
                         </div>
                         <div>
-                            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-500 lg:h-16 lg:w-16">
+                            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-400 lg:h-16 lg:w-16">
                                 <img src={security} alt="dropdown" className="w-8 h-8" />
                             </div>
                             <h2 className="mb-2 text-2xl font-bold">Security</h2>
@@ -58,7 +58,7 @@ export default function Landing() {
                             </p>
                         </div>
                         <div>
-                            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-500 lg:h-16 lg:w-16">
+                            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-400 lg:h-16 lg:w-16">
                                 <img src={maintenance} alt="dropdown" className="w-8 h-8" />
                             </div>
                             <h3 className="mb-2 text-2xl font-bold">Maintenance</h3>
@@ -67,7 +67,7 @@ export default function Landing() {
                             </p>
                         </div>
                         <div>
-                            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-500 lg:h-16 lg:w-16">
+                            <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-blue-400 lg:h-16 lg:w-16">
                                 <img src={maintenance} alt="dropdown" className="w-8 h-8" />
                             </div>
                             <h3 className="mb-2 text-2xl font-bold">Wishlist</h3>
