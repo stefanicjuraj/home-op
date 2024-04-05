@@ -18,7 +18,6 @@ As I am sharing a similar process to many students finishing their studies, the 
 
 - [x] **Bills & Payments**: View and manage your bills and payments, and keep track of your expenses.
 - [x] **Inventory**: Stay updated with the latest inventory and stock levels of your home essentials.
-- [x] **Visitors**: Keep track of your visitors and guests, and manage their stay at your home.
 - [x] **Contacts**: Store and manage a list of emergency contacts, including family members, friends, and local emergency services.
 - [x] **Security**: Set and manage security protocols, such as closing windows, doors before leaving your home.
 - [x] **Maintenance**: Track the condition of their property, schedule regular maintenance activities, and arrange for repairs.
