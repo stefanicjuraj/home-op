@@ -21,7 +21,7 @@ export default function Landing() {
     return (
         <>
             <section>
-                <div className="py-16 px-16 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+                <div className="mt-8 py-16 px-16 mx-auto max-w-screen-xl sm:py-16 lg:px-6 animation glow delay-1">
                     <img src={home} alt="home" className="w-24 h-24 mx-auto" />
                     <h1 className="mt-4 mb-4 text-center text-7xl text-blue-400 font-bold">
                         HomeOp
@@ -32,7 +32,7 @@ export default function Landing() {
                     <Login />
                 </div>
 
-                <div className="bg-blue-50 shadow rounded-xl mt-0 mb-8 gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-8 lg:px-6">
+                <div className="bg-blue-50 shadow rounded-xl mt-0 mb-8 gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-8 lg:px-6 animation glow delay-2">
                     <img className="w-full h-full rounded-xl shadow" src={billspayments} alt="dashboard image" />
                     <div className="mt-4 md:mt-0">
                         <div className="inline-flex justify-center items-center mb-4 w-12 h-12 rounded-full bg-blue-400 lg:h-14 lg:w-14">
@@ -47,7 +47,7 @@ export default function Landing() {
                     </div>
                 </div>
 
-                <div className="bg-blue-50 shadow rounded-xl mt-8 mb-8 gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+                <div className="bg-blue-50 shadow rounded-xl mt-8 mb-8 gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6 animation glow delay-3">
                     <img className="w-full h-full rounded-xl shadow" src={inventoryImage} alt="dashboard image" />
                     <div className="mt-4 md:mt-0">
                         <div className="inline-flex justify-center items-center mb-4 w-12 h-12 rounded-full bg-blue-400 lg:h-14 lg:w-14">
@@ -62,7 +62,7 @@ export default function Landing() {
                     </div>
                 </div>
 
-                <div className="bg-blue-50 shadow rounded-xl mt-8 mb-8 gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+                <div className="bg-blue-50 shadow rounded-xl mt-8 mb-8 gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6 animation glow delay-4">
                     <img className="w-full h-full rounded-xl shadow" src={contacts} alt="dashboard image" />
                     <div className="mt-4 md:mt-0">
                         <div className="inline-flex justify-center items-center mb-4 w-12 h-12 rounded-full bg-blue-400 lg:h-14 lg:w-14">
@@ -77,7 +77,7 @@ export default function Landing() {
                     </div>
                 </div>
 
-                <div className="bg-blue-50 shadow rounded-xl mt-8 mb-8 gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+                <div className="bg-blue-50 shadow rounded-xl mt-8 mb-8 gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6 animation glow delay-5">
                     <img className="w-full h-full rounded-xl shadow" src={securityImage} alt="dashboard image" />
                     <div className="mt-4 md:mt-0">
                         <div className="inline-flex justify-center items-center mb-4 w-12 h-12 rounded-full bg-blue-400 lg:h-14 lg:w-14">
@@ -92,7 +92,7 @@ export default function Landing() {
                     </div>
                 </div>
 
-                <div className="bg-blue-50 shadow rounded-xl mt-8 mb-8 gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+                <div className="bg-blue-50 shadow rounded-xl mt-8 mb-8 gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6 animation glow delay-6">
                     <img className="w-full h-full rounded-xl shadow" src={maintenanceImage} alt="dashboard image" />
                     <div className="mt-4 md:mt-0">
                         <div className="inline-flex justify-center items-center mb-4 w-12 h-12 rounded-full bg-blue-400 lg:h-14 lg:w-14">
@@ -107,7 +107,7 @@ export default function Landing() {
                     </div>
                 </div>
 
-                <div className="bg-blue-50 shadow rounded-xl mt-8 mb-32 gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
+                <div className="bg-blue-50 shadow rounded-xl mt-8 mb-32 gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6 animation glow delay-7">
                     <img className="w-full h-full rounded-xl shadow" src={wishlistImage} alt="dashboard image" />
                     <div className="mt-4 md:mt-0">
                         <div className="inline-flex justify-center items-center mb-4 w-12 h-12 rounded-full bg-blue-400 lg:h-14 lg:w-14">
