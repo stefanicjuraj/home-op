@@ -44,6 +44,10 @@ export default function AddContact() {
                             placeholder="Phone Number"
                             value={newContacts.phoneNumber}
                             onChange={handleInputChange}
+                            onInput={(e) => {
+                                const target = e.target as HTMLInputElement;
+                                target.value = target.value.slice(0, 15);
+                            }}
                             required
                         />
                     </div>

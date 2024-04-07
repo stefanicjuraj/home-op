@@ -43,6 +43,10 @@ export default function AddBillsPayments() {
                             name="amount"
                             value={newPayment.amount}
                             onChange={handleInputChange}
+                            onInput={(e) => {
+                                const target = e.target as HTMLInputElement;
+                                target.value = target.value.slice(0, 5);
+                            }}
                             required />
                     </div>
                 </div>

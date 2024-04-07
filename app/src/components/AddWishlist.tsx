@@ -46,6 +46,10 @@ export default function AddWishlist() {
                             placeholder="Amount"
                             value={newWishlistItem.amount}
                             onChange={handleInputChange}
+                            onInput={(e) => {
+                                const target = e.target as HTMLInputElement;
+                                target.value = target.value.slice(0, 5);
+                            }}
                             required
                         />
                     </div>
@@ -65,6 +69,10 @@ export default function AddWishlist() {
                             placeholder="Cost"
                             value={newWishlistItem.cost}
                             onChange={handleInputChange}
+                            onInput={(e) => {
+                                const target = e.target as HTMLInputElement;
+                                target.value = target.value.slice(0, 5);
+                            }}
                             required />
                     </div>
                 </div>
